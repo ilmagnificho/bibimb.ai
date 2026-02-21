@@ -4,13 +4,20 @@ import { useState, FormEvent } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import SectionWrapper from "@/components/ui/SectionWrapper";
 
-type Role = "buyer" | "maker" | "both";
+type Role = "adopter" | "creator" | "both";
 type Status = "idle" | "loading" | "success" | "error";
 
 const roles: { value: Role; label: string; sub: string }[] = [
-  { value: "buyer", label: "🍳  I want to eat — buy AI tools", sub: "Grab the Namul tier before it fills up" },
-  { value: "maker", label: "🧑‍🍳  I want to cook — sell my AI tool", sub: "List it, get first users + reviews free" },
-  { value: "both", label: "🥢  Both — I eat and I cook", sub: "The full bibimbap experience" },
+  { value: "adopter", label: "👤  Early Adopter — I want to try AI agents", sub: "Get free access to agents before anyone else" },
+  { value: "creator", label: "🧑‍🍳  Agent Creator — I'm building an AI agent", sub: "Get your first real users and reviews, free" },
+  { value: "both", label: "🥢  Both — I try and I build", sub: "The full bibimbap experience" },
+];
+
+const foundingBenefits = [
+  "First access to every new agent on the platform",
+  "Free Namul tier guaranteed on all launches",
+  "0% creator fees — forever, for founding members",
+  "Shape the platform with your feedback",
 ];
 
 export default function WaitlistForm() {
@@ -48,7 +55,7 @@ export default function WaitlistForm() {
 
   return (
     <SectionWrapper id="waitlist" bgClassName="bg-bg">
-      <div className="max-w-[480px] mx-auto">
+      <div className="max-w-[520px] mx-auto">
         <AnimatePresence mode="wait">
           {status === "success" ? (
             <motion.div
@@ -59,8 +66,12 @@ export default function WaitlistForm() {
               className="text-center py-14"
             >
               <p className="text-5xl mb-5">🍚</p>
-              <h3 className="font-display font-bold text-2xl text-text-primary mb-2">Your bowl is ready.</h3>
-              <p className="text-text-secondary">{message || "We'll notify you at launch — with a free Namul spot saved for you."}</p>
+              <h3 className="font-display font-bold text-2xl text-text-primary mb-2">
+                Welcome, founding member.
+              </h3>
+              <p className="text-text-secondary">
+                {message || "We'll notify you at launch — with founding member benefits reserved."}
+              </p>
             </motion.div>
           ) : (
             <motion.div
@@ -70,14 +81,29 @@ export default function WaitlistForm() {
               exit={{ opacity: 0 }}
               transition={{ duration: 0.35 }}
             >
-              <div className="mb-10">
+              <div className="mb-8">
                 <h2 className="font-display font-bold text-[2rem] md:text-[2.4rem] text-text-primary mb-3">
-                  Get a seat at the table. 🥢
+                  Become a founding member. 🥢
                 </h2>
-                <p className="text-text-secondary">
-                  Join the waitlist — we&apos;ll notify you at launch with a{" "}
-                  <span className="font-semibold text-green">Namul (free) spot</span> reserved.
+                <p className="text-text-secondary text-[15px] leading-relaxed">
+                  Join the waitlist and get exclusive founding member benefits<br />
+                  when we launch.
                 </p>
+              </div>
+
+              {/* Founding benefits */}
+              <div className="bg-primary-light/30 rounded-xl p-5 mb-6 border border-primary/10">
+                <p className="text-xs font-bold uppercase tracking-widest text-primary mb-3">
+                  Founding member benefits
+                </p>
+                <ul className="space-y-2">
+                  {foundingBenefits.map((b) => (
+                    <li key={b} className="flex items-start gap-2.5">
+                      <span className="text-primary mt-0.5 text-xs">✓</span>
+                      <span className="text-sm text-text-secondary leading-relaxed">{b}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
 
               <form onSubmit={handleSubmit} className="space-y-4">
@@ -138,7 +164,7 @@ export default function WaitlistForm() {
                       Joining…
                     </span>
                   ) : (
-                    "Reserve my spot 🌶️"
+                    "Become a founding member 🌶️"
                   )}
                 </button>
 

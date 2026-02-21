@@ -35,10 +35,10 @@ export default function PrivacyPage() {
           <Section title="1. Information We Collect">
             <p>We collect information you provide directly, including:</p>
             <ul className="list-disc pl-5 space-y-1.5">
-              <li><strong>Waitlist registration:</strong> email address and role (buyer/maker/both)</li>
+              <li><strong>Waitlist registration:</strong> email address and role (early adopter/agent creator/both)</li>
               <li><strong>Account creation (at launch):</strong> name, email, and optional profile details</li>
-              <li><strong>Product listings (makers):</strong> product name, description, pricing</li>
-              <li><strong>Reviews (buyers):</strong> text content and ratings</li>
+              <li><strong>Agent listings (creators):</strong> agent name, description, pricing configuration</li>
+              <li><strong>Reviews (users):</strong> text content and ratings</li>
             </ul>
             <p>
               We also collect certain information automatically when you use the Service,

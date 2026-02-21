@@ -3,20 +3,20 @@
 import { motion } from "framer-motion";
 import SectionWrapper from "@/components/ui/SectionWrapper";
 
-const buyerBenefits = [
-  { icon: "🥬", text: "First 5 get it free — the Namul tier is always open" },
-  { icon: "🌶️", text: "Then just $4.99 — a coffee's worth of spice" },
-  { icon: "⏰", text: "Earliest buyers lock in the lowest price forever" },
-  { icon: "⭐", text: "Reviews from real early adopters, not fake signups" },
-  { icon: "🥢", text: "Discover tools before they hit the mainstream bowl" },
+const adopterBenefits = [
+  { icon: "🥬", text: "Try any agent free — every listing starts with a free Namul tier" },
+  { icon: "⭐", text: "Read reviews from real users who actually tested the agent" },
+  { icon: "⏰", text: "Lock in the lowest price — early adopters always pay less" },
+  { icon: "🔍", text: "Discover agents before they hit the mainstream" },
+  { icon: "💬", text: "Your review shapes the agent's reputation from day one" },
 ];
 
-const makerBenefits = [
-  { icon: "🚀", text: "Guaranteed first 5 users + reviews on day one" },
-  { icon: "🎯", text: "Set your Jeongsik (target) price — we handle the rest" },
-  { icon: "💸", text: "Zero seller fees, no matter the tier" },
-  { icon: "📣", text: "Built-in launch exposure to real early adopters" },
-  { icon: "💬", text: "Honest feedback before you scale the recipe" },
+const creatorBenefits = [
+  { icon: "🚀", text: "Get your first 5–50 real users guaranteed, with honest reviews" },
+  { icon: "⚙️", text: "Control your pricing — set free slots and target price yourself" },
+  { icon: "💸", text: "Zero platform fees for founding creators, forever" },
+  { icon: "📈", text: "Trust-based pricing means revenue grows with your reputation" },
+  { icon: "🌐", text: "Built-in discovery — users come looking for agents to try" },
 ];
 
 function scrollToWaitlist() {
@@ -28,10 +28,10 @@ export default function ForWhom() {
     <SectionWrapper id="for-whom" bgClassName="bg-[#F5F0EB]">
       <div className="mb-12">
         <h2 className="font-display font-bold text-[2rem] md:text-[2.4rem] text-text-primary mb-2">
-          Two seats at the table
+          Built for both sides
         </h2>
         <p className="text-text-secondary text-sm">
-          Whether you&apos;re eating or cooking — there&apos;s a bowl for you.
+          Whether you&apos;re trying agents or building them — Bibimb.ai works for you.
         </p>
       </div>
 
@@ -42,7 +42,7 @@ export default function ForWhom() {
         viewport={{ once: true, margin: "-40px" }}
         transition={{ staggerChildren: 0.15 }}
       >
-        {/* Buyers */}
+        {/* Early Adopters */}
         <motion.div
           variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}
           transition={{ duration: 0.45 }}
@@ -51,14 +51,14 @@ export default function ForWhom() {
         >
           <div className="mb-6">
             <span className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-widest text-primary mb-3">
-              🍳 For Buyers
+              👤 For Early Adopters
             </span>
             <h3 className="font-display font-bold text-[1.4rem] text-text-primary leading-tight">
-              Eat first,<br />pay less.
+              Try first,<br />trust later.
             </h3>
           </div>
           <ul className="space-y-3.5 flex-1 mb-8">
-            {buyerBenefits.map((b) => (
+            {adopterBenefits.map((b) => (
               <li key={b.text} className="flex items-start gap-3">
                 <span className="text-base mt-0.5 shrink-0">{b.icon}</span>
                 <span className="text-sm text-text-secondary leading-relaxed">{b.text}</span>
@@ -69,11 +69,11 @@ export default function ForWhom() {
             onClick={scrollToWaitlist}
             className="w-full py-3.5 bg-primary text-white font-semibold rounded-[12px] hover:bg-primary-hover transition-colors text-[15px] cursor-pointer"
           >
-            Grab a free spot →
+            Join as early adopter →
           </button>
         </motion.div>
 
-        {/* Makers */}
+        {/* Agent Creators */}
         <motion.div
           variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}
           transition={{ duration: 0.45 }}
@@ -82,14 +82,14 @@ export default function ForWhom() {
         >
           <div className="mb-6">
             <span className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-widest text-secondary mb-3">
-              🧑‍🍳 For Makers
+              🧑‍🍳 For Agent Creators
             </span>
             <h3 className="font-display font-bold text-[1.4rem] text-text-primary leading-tight">
-              Cook once,<br />earn steady.
+              Deploy once,<br />earn trust forever.
             </h3>
           </div>
           <ul className="space-y-3.5 flex-1 mb-8">
-            {makerBenefits.map((b) => (
+            {creatorBenefits.map((b) => (
               <li key={b.text} className="flex items-start gap-3">
                 <span className="text-base mt-0.5 shrink-0">{b.icon}</span>
                 <span className="text-sm text-text-secondary leading-relaxed">{b.text}</span>
@@ -100,7 +100,7 @@ export default function ForWhom() {
             onClick={scrollToWaitlist}
             className="w-full py-3.5 border-2 border-secondary text-secondary font-semibold rounded-[12px] hover:bg-secondary-light/50 transition-colors text-[15px] cursor-pointer"
           >
-            List your recipe →
+            Deploy my agent →
           </button>
         </motion.div>
       </motion.div>

@@ -11,8 +11,8 @@ export default function Footer() {
             <Link href="/" className="font-display font-bold text-[17px] text-text-primary hover:text-primary transition-colors">
               🍚 Bibimb.ai
             </Link>
-            <p className="text-sm text-text-secondary mt-2 max-w-[220px] leading-relaxed">
-              An AI tool marketplace where early buyers pay less — like bibimbap.
+            <p className="text-sm text-text-secondary mt-2 max-w-[260px] leading-relaxed">
+              Where AI agents earn their first trust — through free trials, real reviews, and trust-based pricing.
             </p>
             <p className="text-xs text-text-secondary/50 mt-3">Built with 🌶️ in Seoul</p>
           </div>
@@ -23,7 +23,8 @@ export default function Footer() {
               <p className="text-[10px] font-bold uppercase tracking-widest text-text-secondary/40 mb-3">Product</p>
               <ul className="space-y-2 text-sm text-text-secondary">
                 <li><Link href="/#how-it-works" className="hover:text-text-primary transition-colors">How it works</Link></li>
-                <li><Link href="/#demo" className="hover:text-text-primary transition-colors">Demo</Link></li>
+                <li><Link href="/#demo" className="hover:text-text-primary transition-colors">Pricing demo</Link></li>
+                <li><Link href="/#categories" className="hover:text-text-primary transition-colors">Agent categories</Link></li>
                 <li><Link href="/#waitlist" className="hover:text-text-primary transition-colors">Join waitlist</Link></li>
               </ul>
             </div>
@@ -47,7 +48,7 @@ export default function Footer() {
         {/* Bottom row */}
         <div className="border-t border-border pt-6 flex flex-col sm:flex-row items-center justify-between gap-3">
           <p className="text-xs text-text-secondary/50">© 2026 Bibimb.ai (Tetracorp). All rights reserved.</p>
-          <p className="text-xs text-text-secondary/35">The Early Bird Demo is a simulation only. No real purchases are processed.</p>
+          <p className="text-xs text-text-secondary/35">The pricing demo is a simulation only. No real purchases are processed.</p>
         </div>
       </div>
     </footer>

@@ -15,22 +15,22 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Bibimb.ai - Every AI product starts FREE, then $4.99",
+  title: "Bibimb.ai — Where AI agents earn their first trust",
   description:
-    "A marketplace where AI tools launch FREE for the first 5 users, then $4.99, and prices rise as people buy. Like Kickstarter Early Bird, but for AI products. Discover, compare, and grab AI tools before the price goes up.",
+    "An AI agent trust marketplace. Every agent starts free for early users, then prices rise as trust builds. Free trials, real reviews, trust-based pricing.",
   openGraph: {
-    title: "Bibimb.ai - Every AI product starts FREE, then $4.99",
+    title: "Bibimb.ai — Where AI agents earn their first trust",
     description:
-      "First 5 users get AI tools FREE. Then $4.99. Prices rise as people buy. Be early. Pay less.",
+      "Every AI agent starts free. Early adopters try agents for free, leave real reviews, and build trust. Trust-based pricing that grows with reputation.",
     url: "https://bibimb.ai",
     type: "website",
     images: [{ url: "/og-image.png", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Bibimb.ai - Every AI product starts FREE, then $4.99",
+    title: "Bibimb.ai — Where AI agents earn their first trust",
     description:
-      "First 5 users get AI tools FREE. Then $4.99. Prices rise as people buy.",
+      "Every AI agent starts free. Try agents, leave real reviews, build trust.",
     images: ["/og-image.png"],
   },
 };

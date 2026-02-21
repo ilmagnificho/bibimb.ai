@@ -6,34 +6,34 @@ import SectionWrapper from "@/components/ui/SectionWrapper";
 const steps = [
   {
     step: "01",
-    emoji: "📦",
-    title: "List your bowl",
+    emoji: "🚀",
+    title: "Deploy your agent",
     description:
-      "Makers add their AI tool and set a target price. Every listing starts at FREE — no exceptions.",
-    tag: "For Makers",
+      "Creators list their AI agent and choose how many free slots to offer (5–50) and a target price. Trust building starts here.",
+    tag: "For Creators",
   },
   {
     step: "02",
     emoji: "🥬",
-    title: "First 5 taste free",
+    title: "First users try free",
     description:
-      "The first 5 buyers get it at zero cost — the Namul tier. They leave a real review. No fake signups.",
+      "Early adopters get the agent for free — the Namul tier. They use it, test it, and leave the first real reviews.",
     tag: "Namul tier",
   },
   {
     step: "03",
-    emoji: "🌶️",
-    title: "Price rises with heat",
+    emoji: "📈",
+    title: "Trust builds, price rises",
     description:
-      "Each tier fills up and the price steps up — like adding gochujang to the bowl. $4.99 → $9.99 → $19.99 → $29.",
-    tag: "Gochujang → Jeongsik",
+      "As real reviews accumulate, the price steps up naturally. Each tier reflects growing confidence — from free to target price.",
+    tag: "Trust → Value",
   },
   {
     step: "04",
-    emoji: "💰",
-    title: "Maker earns, buyer wins",
+    emoji: "🌊",
+    title: "A trust economy grows",
     description:
-      "When the target price is reached, makers earn steady income. Zero seller fees. The bowl is complete.",
+      "Agents with real trust earn steady revenue. Users know what they're paying for. Zero creator fees for founding members.",
     tag: "For Everyone",
   },
 ];
@@ -42,11 +42,12 @@ export default function HowItWorks() {
   return (
     <SectionWrapper id="how-it-works">
       <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12">
-        <h2 className="font-display font-bold text-[2rem] md:text-[2.4rem] text-text-primary leading-tight max-w-xs">
-          How the bowl fills up
+        <h2 className="font-display font-bold text-[2rem] md:text-[2.4rem] text-text-primary leading-tight max-w-sm">
+          How trust gets built
         </h2>
         <p className="text-text-secondary max-w-xs md:text-right text-sm leading-relaxed">
-          Early = cheap. Late = full price. Simple as bibimbap.
+          Every agent starts at zero trust.<br />
+          Bibimb.ai gives it a path to earn it.
         </p>
       </div>
 

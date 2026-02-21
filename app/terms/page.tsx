@@ -47,10 +47,10 @@ export default function TermsPage() {
 
           <Section title="2. Description of Service">
             <p>
-              Bibimb.ai is an AI tool marketplace that uses a tiered early-bird pricing
-              model. Buyers can discover and purchase AI tools at prices that increase
-              as more users purchase. Makers can list their AI tools and earn revenue
-              as their product gains traction.
+              Bibimb.ai is an AI agent trust marketplace that uses a trust-based tiered
+              pricing model. Early adopters can discover and try AI agents at reduced prices
+              (starting free), while agent creators can deploy their agents and earn revenue
+              as trust and adoption grow.
             </p>
             <p>
               The Service is currently in pre-launch / waitlist phase. Features and
@@ -71,22 +71,22 @@ export default function TermsPage() {
             </p>
           </Section>
 
-          <Section title="4. Buyer Terms">
+          <Section title="4. Early Adopter Terms">
             <p>
-              As a buyer, you agree that: (a) all purchases are final unless the maker
-              has a stated refund policy; (b) prices displayed at the time of purchase
-              are the prices you will pay; (c) free-tier (Namul tier) access requires
-              leaving an honest review within 14 days of use.
+              As an early adopter (user), you agree that: (a) all purchases are final unless
+              the creator has a stated refund policy; (b) prices displayed at the time of
+              purchase are the prices you will pay; (c) free-tier (Namul tier) access
+              requires leaving an honest review within 14 days of use.
             </p>
           </Section>
 
-          <Section title="5. Maker Terms">
+          <Section title="5. Agent Creator Terms">
             <p>
-              As a maker listing a product, you agree that: (a) you own or have the
-              right to sell the product you list; (b) your product does not infringe
+              As a creator deploying an agent, you agree that: (a) you own or have the
+              right to distribute the agent you list; (b) your agent does not infringe
               any third-party intellectual property rights; (c) you will provide the
-              product as described; (d) you are responsible for customer support for
-              your listed products.
+              agent as described; (d) you are responsible for support for
+              your listed agents.
             </p>
             <p>
               We reserve the right to remove listings that violate our policies or
@@ -98,8 +98,8 @@ export default function TermsPage() {
             <p>You agree not to:</p>
             <ul className="list-disc pl-5 space-y-1.5">
               <li>Use the Service for any unlawful purpose</li>
-              <li>Post false, misleading, or fraudulent listings</li>
-              <li>Attempt to manipulate the pricing system through fake purchases or reviews</li>
+              <li>Post false, misleading, or fraudulent agent listings</li>
+              <li>Attempt to manipulate the pricing system through fake users or reviews</li>
               <li>Reverse engineer, scrape, or otherwise extract data from the Service</li>
               <li>Upload malware, viruses, or any harmful code</li>
               <li>Harass, abuse, or harm other users</li>
@@ -109,7 +109,7 @@ export default function TermsPage() {
           <Section title="7. Intellectual Property">
             <p>
               The Bibimb.ai name, logo, and platform design are the intellectual
-              property of {COMPANY}. User-generated content (product listings,
+              property of {COMPANY}. User-generated content (agent listings,
               reviews) remains the property of the respective creators, but you grant
               us a non-exclusive license to display such content on the Service.
             </p>

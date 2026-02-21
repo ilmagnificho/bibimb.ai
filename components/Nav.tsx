@@ -70,14 +70,14 @@ export default function Nav() {
               onClick={scrollToWaitlist}
               className="text-sm font-semibold text-primary hover:text-primary-hover transition-colors cursor-pointer"
             >
-              Join waitlist →
+              Become a member →
             </button>
           ) : (
             <Link
               href="/#waitlist"
               className="text-sm font-semibold text-primary hover:text-primary-hover transition-colors"
             >
-              Join waitlist →
+              Become a member →
             </Link>
           )}
         </div>

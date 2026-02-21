@@ -22,19 +22,22 @@ export default function Hero() {
           <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-primary/20 bg-primary-light/60 mb-7">
             <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
             <span className="text-xs font-semibold text-primary tracking-wide uppercase">
-              Launching soon · Join the first bowl
+              Pre-launch · Founding members wanted
             </span>
           </div>
 
           <h1 className="font-display font-extrabold text-[2.6rem] md:text-[3.8rem] leading-[1.08] text-text-primary tracking-tight">
-            Every AI tool<br />
-            starts <span className="text-primary">free.</span>
+            Where AI agents<br />
+            earn their first <span className="text-primary">trust.</span>
           </h1>
 
           <p className="mt-6 text-[1.05rem] md:text-[1.15rem] leading-[1.75] text-text-secondary max-w-lg">
-            Like bibimbap — the first few bites are on us.<br />
-            Then the price steps up as more people join.<br />
-            <span className="text-text-primary font-semibold">Be early. Pay less.</span>
+            Thousands of AI agents launch every week.<br />
+            Most die without a single real user.<br />
+            <span className="text-text-primary font-semibold">
+              Bibimb.ai gives every agent its first believers —<br />
+              free trials, real reviews, trust that compounds.
+            </span>
           </p>
 
           <div className="mt-9 flex flex-wrap gap-3">
@@ -42,13 +45,13 @@ export default function Hero() {
               onClick={scrollToWaitlist}
               className="px-7 py-3.5 bg-primary text-white font-semibold rounded-[12px] hover:bg-primary-hover transition-colors text-[15px] cursor-pointer"
             >
-              I want to buy tools 🍳
+              Try agents for free 🥬
             </button>
             <button
               onClick={scrollToWaitlist}
               className="px-7 py-3.5 border-2 border-border text-text-primary font-semibold rounded-[12px] hover:border-primary/40 transition-colors text-[15px] cursor-pointer"
             >
-              I&apos;m building one 🧑‍🍳
+              Deploy my agent 🚀
             </button>
           </div>
         </motion.div>
@@ -61,9 +64,9 @@ export default function Hero() {
           transition={{ delay: 0.35, duration: 0.5 }}
         >
           {[
-            { val: "FREE", label: "First 5 users", sub: "Namul tier 🥬" },
-            { val: "$4.99", label: "Next 10 users", sub: "Gochujang tier 🌶️" },
-            { val: "0%", label: "Seller fees", sub: "Always, forever" },
+            { val: "FREE", label: "First users of every agent", sub: "Namul tier 🥬" },
+            { val: "5–50", label: "Free slots, creator's choice", sub: "Flexible trial sizes" },
+            { val: "0%", label: "Creator fees at launch", sub: "Founding creators, forever" },
           ].map((s) => (
             <div key={s.label}>
               <p className="font-display font-bold text-[1.6rem] text-text-primary">{s.val}</p>
