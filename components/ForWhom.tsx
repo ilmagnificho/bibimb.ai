@@ -30,7 +30,7 @@ export default function ForWhom() {
         <h2 className="font-display font-bold text-[2rem] md:text-[2.4rem] text-text-primary mb-2">
           Built for both sides
         </h2>
-        <p className="text-text-secondary text-sm">
+        <p className="text-text-secondary text-[15px]">
           Whether you&apos;re trying agents or building them — Bibimb.ai works for you.
         </p>
       </div>
@@ -61,7 +61,7 @@ export default function ForWhom() {
             {adopterBenefits.map((b) => (
               <li key={b.text} className="flex items-start gap-3">
                 <span className="text-base mt-0.5 shrink-0">{b.icon}</span>
-                <span className="text-sm text-text-secondary leading-relaxed">{b.text}</span>
+                <span className="text-[15px] text-text-secondary leading-relaxed">{b.text}</span>
               </li>
             ))}
           </ul>
@@ -92,7 +92,7 @@ export default function ForWhom() {
             {creatorBenefits.map((b) => (
               <li key={b.text} className="flex items-start gap-3">
                 <span className="text-base mt-0.5 shrink-0">{b.icon}</span>
-                <span className="text-sm text-text-secondary leading-relaxed">{b.text}</span>
+                <span className="text-[15px] text-text-secondary leading-relaxed">{b.text}</span>
               </li>
             ))}
           </ul>

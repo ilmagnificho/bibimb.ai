@@ -30,12 +30,20 @@
 
 html {
   scroll-behavior: smooth;
+  font-size: 17px; /* base: 브라우저 기본 16px보다 약간 키워 가독성 향상 */
 }
 
 body {
   background-color: var(--color-bg);
   color: var(--color-text-primary);
   font-family: var(--font-body);
+  font-size: 1rem;       /* 17px */
+  line-height: 1.7;      /* 여유로운 행간 */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* 섹션 본문 텍스트 최소 가독성 보장 */
+p, li {
+  font-size: max(0.88rem, 15px); /* 최소 15px */
 }

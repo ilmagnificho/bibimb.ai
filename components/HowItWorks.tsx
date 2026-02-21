@@ -45,7 +45,7 @@ export default function HowItWorks() {
         <h2 className="font-display font-bold text-[2rem] md:text-[2.4rem] text-text-primary leading-tight max-w-sm">
           How trust gets built
         </h2>
-        <p className="text-text-secondary max-w-xs md:text-right text-sm leading-relaxed">
+        <p className="text-text-secondary max-w-xs md:text-right text-[15px] leading-relaxed">
           Every agent starts at zero trust.<br />
           Bibimb.ai gives it a path to earn it.
         </p>
@@ -71,7 +71,7 @@ export default function HowItWorks() {
               <h3 className="font-display font-bold text-[1.1rem] text-text-primary mb-1.5 leading-snug">
                 {item.title}
               </h3>
-              <p className="text-text-secondary text-sm leading-relaxed">
+              <p className="text-text-secondary text-[15px] leading-relaxed">
                 {item.description}
               </p>
             </div>
