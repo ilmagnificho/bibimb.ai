@@ -24,7 +24,7 @@ export default function Footer() {
               <ul className="space-y-2 text-sm text-text-secondary">
                 <li><Link href="/#how-it-works" className="hover:text-text-primary transition-colors">How it works</Link></li>
                 <li><Link href="/#demo" className="hover:text-text-primary transition-colors">Pricing demo</Link></li>
-                <li><Link href="/#categories" className="hover:text-text-primary transition-colors">Agent categories</Link></li>
+                <li><Link href="/#community" className="hover:text-text-primary transition-colors">Community</Link></li>
                 <li><Link href="/#waitlist" className="hover:text-text-primary transition-colors">Join waitlist</Link></li>
               </ul>
             </div>

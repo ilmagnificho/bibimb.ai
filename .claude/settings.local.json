@@ -16,7 +16,12 @@
       "Bash(git fetch:*)",
       "Bash(cmdkey /list:*)",
       "Bash(cmd.exe /c:*)",
-      "Bash(git -c credential.helper= push https://github.com/ilmagnificho/bibimb.ai.git main)"
+      "Bash(git -c credential.helper= push https://github.com/ilmagnificho/bibimb.ai.git main)",
+      "WebFetch(domain:agent.ai)",
+      "WebFetch(domain:blog.agent.ai)",
+      "WebFetch(domain:www.producthunt.com)",
+      "WebFetch(domain:www.cxtoday.com)",
+      "WebFetch(domain:www.bostonglobe.com)"
     ]
   }
 }
