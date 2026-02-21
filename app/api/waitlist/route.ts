@@ -18,7 +18,7 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    if (!["buyer", "maker", "both"].includes(role)) {
+    if (!["adopter", "creator", "both"].includes(role)) {
       return NextResponse.json(
         { success: false, message: "Invalid role." },
         { status: 400 }
