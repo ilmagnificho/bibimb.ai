@@ -47,7 +47,7 @@ export default function Footer() {
 
         {/* Bottom row */}
         <div className="border-t border-border pt-6 flex flex-col sm:flex-row items-center justify-between gap-3">
-          <p className="text-xs text-text-secondary/50">© 2026 Bibimb.ai (Tetracorp). All rights reserved.</p>
+          <p className="text-xs text-text-secondary/50">© 2026 Bibimb.ai · Tetra Corporation. All rights reserved.</p>
           <p className="text-xs text-text-secondary/35">The pricing demo is a simulation only. No real purchases are processed.</p>
         </div>
       </div>

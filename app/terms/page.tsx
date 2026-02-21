@@ -7,7 +7,7 @@ export const metadata: Metadata = {
 };
 
 const EFFECTIVE_DATE = "February 21, 2026";
-const COMPANY = "Tetracorp";
+const COMPANY = "Tetra Corporation";
 const EMAIL = "info@tetracorp.co.kr";
 
 function Section({ title, children }: { title: string; children: React.ReactNode }) {
@@ -143,9 +143,14 @@ export default function TermsPage() {
           <Section title="10. Governing Law">
             <p>
               These Terms are governed by and construed in accordance with the laws
-              of the Republic of Korea, without regard to its conflict of law principles.
-              Any disputes arising from these Terms shall be subject to the exclusive
-              jurisdiction of the courts located in Seoul, Republic of Korea.
+              of the State of Delaware, USA, without regard to its conflict of law
+              principles.
+            </p>
+            <p>
+              We will first seek to resolve any dispute through good-faith negotiation.
+              If unresolved within 30 days, disputes shall be subject to the jurisdiction
+              of the state and federal courts located in Delaware, USA — or, by mutual
+              agreement, through binding arbitration under AAA Commercial Rules.
             </p>
           </Section>
 
