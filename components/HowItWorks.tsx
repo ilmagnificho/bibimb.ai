@@ -6,39 +6,47 @@ import SectionWrapper from "@/components/ui/SectionWrapper";
 const steps = [
   {
     step: "01",
-    title: "List",
     emoji: "📦",
-    description: "Makers list their tool and set a target price. Starts at FREE — always.",
+    title: "List your bowl",
+    description:
+      "Makers add their AI tool and set a target price. Every listing starts at FREE — no exceptions.",
+    tag: "For Makers",
   },
   {
     step: "02",
-    title: "Taste",
-    emoji: "🍴",
-    description: "First 5 users get it free and leave a real review. No fake signups.",
+    emoji: "🥬",
+    title: "First 5 taste free",
+    description:
+      "The first 5 buyers get it at zero cost — the Namul tier. They leave a real review. No fake signups.",
+    tag: "Namul tier",
   },
   {
     step: "03",
-    title: "Rise",
-    emoji: "📈",
-    description: "Each tier fills up and the price steps up: $4.99 → $9.99 → $19.99 → $29.",
+    emoji: "🌶️",
+    title: "Price rises with heat",
+    description:
+      "Each tier fills up and the price steps up — like adding gochujang to the bowl. $4.99 → $9.99 → $19.99 → $29.",
+    tag: "Gochujang → Jeongsik",
   },
   {
     step: "04",
-    title: "Earn",
     emoji: "💰",
-    description: "Maker hits their target price and earns steady income. Zero seller fees.",
+    title: "Maker earns, buyer wins",
+    description:
+      "When the target price is reached, makers earn steady income. Zero seller fees. The bowl is complete.",
+    tag: "For Everyone",
   },
 ];
 
 export default function HowItWorks() {
   return (
     <SectionWrapper id="how-it-works">
-      <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-14">
+      <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12">
         <h2 className="font-display font-bold text-[2rem] md:text-[2.4rem] text-text-primary leading-tight max-w-xs">
-          How it works
+          How the bowl fills up
         </h2>
         <p className="text-text-secondary max-w-xs md:text-right text-sm leading-relaxed">
-          A pricing model that rewards early adopters and gives makers a fair launch.
+          Early = cheap. Late = full price. Simple as bibimbap.
         </p>
       </div>
 
@@ -50,16 +58,25 @@ export default function HowItWorks() {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true, margin: "-40px" }}
             transition={{ duration: 0.4, delay: idx * 0.08 }}
-            className="bg-bg p-7 flex flex-col gap-4"
+            className="bg-bg p-7 flex flex-col gap-3"
           >
-            <div className="flex items-center gap-3">
-              <span className="text-[10px] font-bold tracking-widest text-text-secondary/50 uppercase">{item.step}</span>
+            <div className="flex items-center gap-2.5">
+              <span className="text-[10px] font-bold tracking-widest text-text-secondary/40 uppercase">
+                {item.step}
+              </span>
               <span className="text-2xl">{item.emoji}</span>
             </div>
             <div>
-              <h3 className="font-display font-bold text-xl text-text-primary mb-2">{item.title}</h3>
-              <p className="text-text-secondary text-sm leading-relaxed">{item.description}</p>
+              <h3 className="font-display font-bold text-[1.1rem] text-text-primary mb-1.5 leading-snug">
+                {item.title}
+              </h3>
+              <p className="text-text-secondary text-sm leading-relaxed">
+                {item.description}
+              </p>
             </div>
+            <span className="mt-auto inline-block text-[10px] font-semibold uppercase tracking-wider text-text-secondary/40 pt-2">
+              {item.tag}
+            </span>
           </motion.div>
         ))}
       </div>

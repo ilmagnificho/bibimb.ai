@@ -8,9 +8,9 @@ type Role = "buyer" | "maker" | "both";
 type Status = "idle" | "loading" | "success" | "error";
 
 const roles: { value: Role; label: string; sub: string }[] = [
-  { value: "buyer", label: "I want to buy AI tools", sub: "Get free & early access" },
-  { value: "maker", label: "I'm building an AI tool", sub: "List & get first users" },
-  { value: "both", label: "Both", sub: "I do it all" },
+  { value: "buyer", label: "🍳  I want to eat — buy AI tools", sub: "Grab the Namul tier before it fills up" },
+  { value: "maker", label: "🧑‍🍳  I want to cook — sell my AI tool", sub: "List it, get first users + reviews free" },
+  { value: "both", label: "🥢  Both — I eat and I cook", sub: "The full bibimbap experience" },
 ];
 
 export default function WaitlistForm() {
@@ -58,9 +58,9 @@ export default function WaitlistForm() {
               transition={{ duration: 0.35 }}
               className="text-center py-14"
             >
-              <p className="text-5xl mb-5">🎉</p>
-              <h3 className="font-display font-bold text-2xl text-text-primary mb-2">You&apos;re on the list.</h3>
-              <p className="text-text-secondary">{message || "We'll let you know the moment we launch."}</p>
+              <p className="text-5xl mb-5">🍚</p>
+              <h3 className="font-display font-bold text-2xl text-text-primary mb-2">Your bowl is ready.</h3>
+              <p className="text-text-secondary">{message || "We'll notify you at launch — with a free Namul spot saved for you."}</p>
             </motion.div>
           ) : (
             <motion.div
@@ -72,10 +72,11 @@ export default function WaitlistForm() {
             >
               <div className="mb-10">
                 <h2 className="font-display font-bold text-[2rem] md:text-[2.4rem] text-text-primary mb-3">
-                  Get early access.
+                  Get a seat at the table. 🥢
                 </h2>
                 <p className="text-text-secondary">
-                  Join the waitlist — we&apos;ll notify you at launch with a free spot reserved.
+                  Join the waitlist — we&apos;ll notify you at launch with a{" "}
+                  <span className="font-semibold text-green">Namul (free) spot</span> reserved.
                 </p>
               </div>
 
@@ -137,7 +138,7 @@ export default function WaitlistForm() {
                       Joining…
                     </span>
                   ) : (
-                    "Join the waitlist →"
+                    "Reserve my spot 🌶️"
                   )}
                 </button>
 

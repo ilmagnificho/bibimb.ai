@@ -4,19 +4,19 @@ import { motion } from "framer-motion";
 import SectionWrapper from "@/components/ui/SectionWrapper";
 
 const buyerBenefits = [
-  { icon: "🆓", text: "First 5 users get it completely free" },
-  { icon: "☕", text: "Then just $4.99 — less than a coffee" },
-  { icon: "⏰", text: "Earliest buyers lock in the lowest price" },
-  { icon: "⭐", text: "Real reviews from real early users" },
-  { icon: "🔍", text: "Discover tools before they go mainstream" },
+  { icon: "🥬", text: "First 5 get it free — the Namul tier is always open" },
+  { icon: "🌶️", text: "Then just $4.99 — a coffee's worth of spice" },
+  { icon: "⏰", text: "Earliest buyers lock in the lowest price forever" },
+  { icon: "⭐", text: "Reviews from real early adopters, not fake signups" },
+  { icon: "🥢", text: "Discover tools before they hit the mainstream bowl" },
 ];
 
 const makerBenefits = [
   { icon: "🚀", text: "Guaranteed first 5 users + reviews on day one" },
-  { icon: "🎯", text: "Set your own target price, we handle the rest" },
-  { icon: "💸", text: "Zero seller fees, ever" },
-  { icon: "📣", text: "Built-in launch exposure to early adopters" },
-  { icon: "💬", text: "Real feedback before you scale" },
+  { icon: "🎯", text: "Set your Jeongsik (target) price — we handle the rest" },
+  { icon: "💸", text: "Zero seller fees, no matter the tier" },
+  { icon: "📣", text: "Built-in launch exposure to real early adopters" },
+  { icon: "💬", text: "Honest feedback before you scale the recipe" },
 ];
 
 function scrollToWaitlist() {
@@ -26,9 +26,14 @@ function scrollToWaitlist() {
 export default function ForWhom() {
   return (
     <SectionWrapper id="for-whom" bgClassName="bg-[#F5F0EB]">
-      <h2 className="font-display font-bold text-[2rem] md:text-[2.4rem] text-text-primary mb-14">
-        Built for two kinds of people
-      </h2>
+      <div className="mb-12">
+        <h2 className="font-display font-bold text-[2rem] md:text-[2.4rem] text-text-primary mb-2">
+          Two seats at the table
+        </h2>
+        <p className="text-text-secondary text-sm">
+          Whether you&apos;re eating or cooking — there&apos;s a bowl for you.
+        </p>
+      </div>
 
       <motion.div
         className="grid grid-cols-1 md:grid-cols-2 gap-4"
@@ -45,9 +50,11 @@ export default function ForWhom() {
           style={{ boxShadow: "0 1px 16px rgba(0,0,0,0.05)" }}
         >
           <div className="mb-6">
-            <span className="inline-block text-xs font-bold uppercase tracking-widest text-primary mb-3">For Buyers</span>
-            <h3 className="font-display font-bold text-2xl text-text-primary leading-tight">
-              Get more AI,<br />spend less money.
+            <span className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-widest text-primary mb-3">
+              🍳 For Buyers
+            </span>
+            <h3 className="font-display font-bold text-[1.4rem] text-text-primary leading-tight">
+              Eat first,<br />pay less.
             </h3>
           </div>
           <ul className="space-y-3.5 flex-1 mb-8">
@@ -62,7 +69,7 @@ export default function ForWhom() {
             onClick={scrollToWaitlist}
             className="w-full py-3.5 bg-primary text-white font-semibold rounded-[12px] hover:bg-primary-hover transition-colors text-[15px] cursor-pointer"
           >
-            Join as buyer →
+            Grab a free spot →
           </button>
         </motion.div>
 
@@ -74,9 +81,11 @@ export default function ForWhom() {
           style={{ boxShadow: "0 1px 16px rgba(0,0,0,0.05)" }}
         >
           <div className="mb-6">
-            <span className="inline-block text-xs font-bold uppercase tracking-widest text-secondary mb-3">For Makers</span>
-            <h3 className="font-display font-bold text-2xl text-text-primary leading-tight">
-              Launch fast,<br />earn fairly.
+            <span className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-widest text-secondary mb-3">
+              🧑‍🍳 For Makers
+            </span>
+            <h3 className="font-display font-bold text-[1.4rem] text-text-primary leading-tight">
+              Cook once,<br />earn steady.
             </h3>
           </div>
           <ul className="space-y-3.5 flex-1 mb-8">
@@ -91,7 +100,7 @@ export default function ForWhom() {
             onClick={scrollToWaitlist}
             className="w-full py-3.5 border-2 border-secondary text-secondary font-semibold rounded-[12px] hover:bg-secondary-light/50 transition-colors text-[15px] cursor-pointer"
           >
-            List your tool →
+            List your recipe →
           </button>
         </motion.div>
       </motion.div>
