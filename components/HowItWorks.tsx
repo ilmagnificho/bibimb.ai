@@ -5,76 +5,64 @@ import SectionWrapper from "@/components/ui/SectionWrapper";
 
 const steps = [
   {
-    step: 1,
+    step: "01",
     title: "List",
     emoji: "📦",
-    description:
-      "Makers list their AI tool and set a target price. Starting price is always FREE 🆓",
+    description: "Makers list their tool and set a target price. Starts at FREE — always.",
   },
   {
-    step: 2,
+    step: "02",
     title: "Taste",
     emoji: "🍴",
-    description:
-      "First 5 users try it for FREE and leave a review. Real feedback from real users.",
+    description: "First 5 users get it free and leave a real review. No fake signups.",
   },
   {
-    step: 3,
+    step: "03",
     title: "Rise",
     emoji: "📈",
-    description:
-      "As more people buy, the price rises: $4.99 → $9.99 → $29. Early buyers pay less.",
+    description: "Each tier fills up and the price steps up: $4.99 → $9.99 → $19.99 → $29.",
   },
   {
-    step: 4,
+    step: "04",
     title: "Earn",
     emoji: "💰",
-    description:
-      "Once target price is reached, makers earn steady revenue. Zero seller fees.",
+    description: "Maker hits their target price and earns steady income. Zero seller fees.",
   },
 ];
-
-const cardVariants = {
-  hidden: { opacity: 0, y: 30 },
-  visible: { opacity: 1, y: 0 },
-};
 
 export default function HowItWorks() {
   return (
     <SectionWrapper id="how-it-works">
-      <h2 className="font-display font-bold text-[2rem] md:text-[2.5rem] text-center text-text-primary mb-14">
-        How Bibimb.ai Works
-      </h2>
+      <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-14">
+        <h2 className="font-display font-bold text-[2rem] md:text-[2.4rem] text-text-primary leading-tight max-w-xs">
+          How it works
+        </h2>
+        <p className="text-text-secondary max-w-xs md:text-right text-sm leading-relaxed">
+          A pricing model that rewards early adopters and gives makers a fair launch.
+        </p>
+      </div>
 
-      <motion.div
-        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, margin: "-50px" }}
-        transition={{ staggerChildren: 0.15 }}
-      >
-        {steps.map((item) => (
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-border rounded-2xl overflow-hidden border border-border">
+        {steps.map((item, idx) => (
           <motion.div
             key={item.step}
-            variants={cardVariants}
-            transition={{ duration: 0.5 }}
-            className="bg-bg-card rounded-[16px] p-8 border border-border shadow-sm"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true, margin: "-40px" }}
+            transition={{ duration: 0.4, delay: idx * 0.08 }}
+            className="bg-bg p-7 flex flex-col gap-4"
           >
-            <div className="flex items-center gap-3 mb-4">
-              <span className="flex items-center justify-center w-8 h-8 rounded-full bg-primary text-white text-sm font-bold">
-                {item.step}
-              </span>
-              <span className="text-3xl">{item.emoji}</span>
+            <div className="flex items-center gap-3">
+              <span className="text-[10px] font-bold tracking-widest text-text-secondary/50 uppercase">{item.step}</span>
+              <span className="text-2xl">{item.emoji}</span>
             </div>
-            <h3 className="font-display font-semibold text-xl text-text-primary mb-2">
-              {item.title}
-            </h3>
-            <p className="text-text-secondary text-sm leading-relaxed">
-              {item.description}
-            </p>
+            <div>
+              <h3 className="font-display font-bold text-xl text-text-primary mb-2">{item.title}</h3>
+              <p className="text-text-secondary text-sm leading-relaxed">{item.description}</p>
+            </div>
           </motion.div>
         ))}
-      </motion.div>
+      </div>
     </SectionWrapper>
   );
 }
