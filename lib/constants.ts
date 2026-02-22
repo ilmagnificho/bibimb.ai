@@ -112,15 +112,3 @@ export const DEFAULT_FREE_SLOTS = 5;
 export const DEFAULT_TARGET_PRICE = 29;
 export const EARLY_BIRD_TIERS = generateTiers(DEFAULT_FREE_SLOTS, DEFAULT_TARGET_PRICE);
 export const TOTAL_SLOTS = getTotalSlots(EARLY_BIRD_TIERS);
-
-// Agent categories for the marketplace
-export const AGENT_CATEGORIES = [
-  { icon: "✍️", name: "Writing & Content", examples: "Blog posts, ad copy, SEO content" },
-  { icon: "💻", name: "Code & Dev", examples: "Code review, bug fixing, refactoring" },
-  { icon: "📊", name: "Data & Analytics", examples: "Reports, dashboards, insights" },
-  { icon: "🎨", name: "Design & Creative", examples: "UI/UX, image gen, branding" },
-  { icon: "📣", name: "Marketing & Sales", examples: "Lead gen, outreach, campaigns" },
-  { icon: "🤝", name: "Customer Support", examples: "Chatbots, ticket triage, FAQs" },
-  { icon: "⚙️", name: "Automation & Ops", examples: "Workflows, scheduling, integration" },
-  { icon: "🔬", name: "Research & Strategy", examples: "Market research, competitive analysis" },
-] as const;

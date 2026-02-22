@@ -15,22 +15,22 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Bibimb.ai — Where AI agents earn their first trust",
+  title: "Bibimb.ai - Where AI Agent Creators Come to Earn",
   description:
-    "An AI agent trust marketplace. Every agent starts free for early users, then prices rise as trust builds. Free trials, real reviews, trust-based pricing.",
+    "AI agent creators: get your first real users, reviews, and revenue. A community where builders earn together through trust-based pricing. Zero platform fees for founding creators.",
   openGraph: {
-    title: "Bibimb.ai — Where AI agents earn their first trust",
+    title: "Bibimb.ai - Where AI Agent Creators Come to Earn",
     description:
-      "Every AI agent starts free. Early adopters try agents for free, leave real reviews, and build trust. Trust-based pricing that grows with reputation.",
+      "GPT Store pays nothing. Bibimb.ai is the community where agent creators get first users, first reviews, first revenue. Zero fees for founding creators.",
     url: "https://bibimb.ai",
     type: "website",
     images: [{ url: "/og-image.png", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Bibimb.ai — Where AI agents earn their first trust",
+    title: "Bibimb.ai - Where AI Agent Creators Come to Earn",
     description:
-      "Every AI agent starts free. Try agents, leave real reviews, build trust.",
+      "Your AI agent deserves its first believers. Deploy, earn trust, start charging. Zero platform fees.",
     images: ["/og-image.png"],
   },
 };

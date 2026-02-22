@@ -1,26 +1,21 @@
 import Nav from "@/components/Nav";
 import Hero from "@/components/Hero";
-import WhyBibimb from "@/components/WhyBibimb";
+import TrustProblem from "@/components/TrustProblem";
 import HowItWorks from "@/components/HowItWorks";
-import MidPageCTA from "@/components/MidPageCTA";
-import EarlyBirdDemo from "@/components/EarlyBirdDemo";
-import ForWhom from "@/components/ForWhom";
-import CommunitySection from "@/components/CommunitySection";
+import CreatorDemo from "@/components/CreatorDemo";
+import CommunityJoin from "@/components/CommunityJoin";
 import WaitlistForm from "@/components/WaitlistForm";
 import Footer from "@/components/Footer";
-import ScrollToTop from "@/components/ScrollToTop";
 import StickySignup from "@/components/StickySignup";
 
-// 섹션 순서:
-// Hero (2-col with agent cards)
-// WhyBibimb (trust problem + categories)
-// HowItWorks
-// MidPageCTA  ← primary 배경 full-width 배너, 스크롤 중간 CTA
-// EarlyBirdDemo
-// ForWhom
-// CommunitySection
-// WaitlistForm
-// + StickySignup (fixed bottom, 스크롤 후 등장)
+// Section order:
+// Hero (2-col with creator journey cards)
+// TrustProblem (GPT Store failure + builder pain points)
+// HowItWorks (4-step flow)
+// CreatorDemo (interactive pricing tool)
+// CommunityJoin (founding creators pitch)
+// WaitlistForm (creator-first signup)
+// + StickySignup (fixed bottom, appears on scroll)
 
 export default function Home() {
   return (
@@ -28,16 +23,13 @@ export default function Home() {
       <Nav />
       <main>
         <Hero />
-        <WhyBibimb />
+        <TrustProblem />
         <HowItWorks />
-        <MidPageCTA />
-        <EarlyBirdDemo />
-        <ForWhom />
-        <CommunitySection />
+        <CreatorDemo />
+        <CommunityJoin />
         <WaitlistForm />
       </main>
       <Footer />
-      <ScrollToTop />
       <StickySignup />
     </>
   );

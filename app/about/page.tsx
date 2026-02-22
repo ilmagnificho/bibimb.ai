@@ -5,7 +5,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "About — Bibimb.ai",
-  description: "Learn about Bibimb.ai — where AI agents earn their first trust through free trials, real reviews, and trust-based pricing.",
+  description: "Learn about Bibimb.ai — the monetization-first community where AI agent creators get their first users, reviews, and revenue.",
 };
 
 export default function AboutPage() {
@@ -20,13 +20,14 @@ export default function AboutPage() {
             <span className="text-xs font-bold uppercase tracking-widest text-primary">About</span>
             <h1 className="font-display font-extrabold text-[2.2rem] md:text-[3rem] leading-[1.1] text-text-primary mt-3 mb-5">
               We built Bibimb.ai<br />
-              because AI agents<br />
-              have a trust problem.
+              because agent creators<br />
+              deserve to earn.
             </h1>
             <p className="text-[1.05rem] leading-[1.8] text-text-secondary">
-              The world is producing thousands of AI agents every week. Most of them
-              are genuinely useful — but they die quietly because they never get their
-              first real users, their first honest reviews, their first moment of trust.
+              Bibimb.ai is not just a marketplace &mdash; it&apos;s a monetization-first
+              creator community. We built it because GPT Store and existing platforms
+              fail indie agent creators. The trust-tier pricing system is the mechanism;
+              community is the foundation.
             </p>
           </div>
 
@@ -95,10 +96,10 @@ export default function AboutPage() {
               For agent creators
             </h2>
             <p className="text-text-secondary leading-[1.8] text-[15px] mb-4">
-              Deploying your agent on Bibimb.ai is free. You set two things:
-              how many free trial slots (5–50) and your target price ($0–$99).
-              We auto-calculate the intermediate tiers at 30%, 60%, and 85% of
-              your target price. You control the economics.
+              You&apos;re not deploying into a void &mdash; you&apos;re deploying into a community
+              of builders who will test, review, and champion your agent. Set two things:
+              how many free trial slots (5&ndash;50) and your target price ($0&ndash;$99).
+              We auto-calculate the intermediate tiers. You control the economics.
             </p>
             <div className="bg-secondary-light/40 rounded-xl p-5 border border-secondary/15">
               <p className="font-display font-bold text-[15px] text-text-primary mb-2">
@@ -126,13 +127,21 @@ export default function AboutPage() {
             <h2 className="font-display font-bold text-[1.4rem] text-text-primary mb-4">
               Why now?
             </h2>
-            <p className="text-text-secondary leading-[1.8] text-[15px]">
-              The AI agent explosion is real — but the infrastructure for trust is missing.
-              Existing marketplaces focus on discovery but not trust. Crypto-based approaches
-              add friction that kills adoption. Enterprise solutions exclude indie creators.
-              Bibimb.ai fills the gap: a simple, trust-first marketplace where agents earn
-              credibility through real use, not marketing budgets.
-            </p>
+            <div className="space-y-4 text-text-secondary text-[15px] leading-[1.8]">
+              <p>
+                The GPT Store promised democratized monetization but delivered $0 for most
+                creators. US-only payouts, invite-only programs, and zero transparency left
+                builders with millions of users but no revenue.
+              </p>
+              <p>
+                Existing marketplaces focus on discovery, not trust. Crypto-based approaches
+                add friction that kills adoption. Enterprise platforms exclude indie creators entirely.
+              </p>
+              <p>
+                Bibimb.ai fills the gap: a community-first platform where creators earn through
+                community-verified trust &mdash; not marketing budgets or platform gatekeeping.
+              </p>
+            </div>
           </div>
 
           {/* Disclaimer */}
@@ -174,16 +183,16 @@ export default function AboutPage() {
           {/* CTA */}
           <div className="bg-[#F5F0EB] rounded-2xl p-8 text-center">
             <p className="font-display font-bold text-xl text-text-primary mb-2">
-              Ready to be a founding member?
+              Ready to be a founding creator?
             </p>
             <p className="text-text-secondary text-sm mb-5">
-              Join the waitlist. Help shape the future of AI agent trust.
+              Join the waitlist. Help shape the future of AI agent monetization.
             </p>
             <Link
               href="/#waitlist"
               className="inline-block px-8 py-3.5 bg-primary text-white font-semibold rounded-[12px] hover:bg-primary-hover transition-colors text-[15px]"
             >
-              Join the waitlist →
+              Become a founding creator →
             </Link>
           </div>
 

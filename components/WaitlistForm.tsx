@@ -4,20 +4,20 @@ import { useState, FormEvent } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import SectionWrapper from "@/components/ui/SectionWrapper";
 
-type Role = "adopter" | "creator" | "both";
+type Role = "creator" | "adopter" | "both";
 type Status = "idle" | "loading" | "success" | "error";
 
 const roles: { value: Role; label: string; sub: string }[] = [
-  { value: "adopter", label: "👤  Early Adopter — I want to try AI agents", sub: "Get free access to agents before anyone else" },
-  { value: "creator", label: "🧑‍🍳  Agent Creator — I'm building an AI agent", sub: "Get your first real users and reviews, free" },
-  { value: "both", label: "🥢  Both — I try and I build", sub: "The full bibimbap experience" },
+  { value: "creator", label: "\ud83e\uddd1\u200d\ud83c\udf73  Agent Creator \u2014 I\u2019m building an AI agent", sub: "Get your first real users and reviews, free" },
+  { value: "adopter", label: "\ud83d\udc64  Early Adopter \u2014 I want to try AI agents", sub: "Get free access to agents before anyone else" },
+  { value: "both", label: "\ud83e\udd62  Both \u2014 I build and I try", sub: "The full bibimbap experience" },
 ];
 
 const foundingBenefits = [
-  "First access to every new agent on the platform",
-  "Free Namul tier guaranteed on all launches",
-  "0% creator fees — forever, for founding members",
-  "Shape the platform with your feedback",
+  "0% creator fees \u2014 forever, for founding members",
+  "Priority listing when marketplace opens",
+  "Shape the platform with your direct feedback",
+  "Founding Creator badge on your profile",
 ];
 
 export default function WaitlistForm() {
@@ -49,7 +49,7 @@ export default function WaitlistForm() {
       }
     } catch {
       setStatus("error");
-      setMessage("Network error — please try again.");
+      setMessage("Network error \u2014 please try again.");
     }
   };
 
@@ -65,12 +65,12 @@ export default function WaitlistForm() {
               transition={{ duration: 0.35 }}
               className="text-center py-14"
             >
-              <p className="text-5xl mb-5">🍚</p>
+              <p className="text-5xl mb-5">{"\ud83c\udf5a"}</p>
               <h3 className="font-display font-bold text-2xl text-text-primary mb-2">
-                Welcome, founding member.
+                Welcome, founding creator.
               </h3>
               <p className="text-text-secondary">
-                {message || "We'll notify you at launch — with founding member benefits reserved."}
+                {message || "We\u2019ll notify you at launch \u2014 with founding creator benefits reserved."}
               </p>
             </motion.div>
           ) : (
@@ -83,10 +83,10 @@ export default function WaitlistForm() {
             >
               <div className="mb-8">
                 <h2 className="font-display font-bold text-[2rem] md:text-[2.4rem] text-text-primary mb-3">
-                  Become a founding member. 🥢
+                  Become a founding creator. {"\ud83e\udd62"}
                 </h2>
                 <p className="text-text-secondary text-[15px] leading-relaxed">
-                  Join the waitlist and get exclusive founding member benefits<br />
+                  Join the waitlist and get exclusive founding creator benefits<br />
                   when we launch.
                 </p>
               </div>
@@ -94,12 +94,12 @@ export default function WaitlistForm() {
               {/* Founding benefits */}
               <div className="bg-primary-light/30 rounded-xl p-5 mb-6 border border-primary/10">
                 <p className="text-xs font-bold uppercase tracking-widest text-primary mb-3">
-                  Founding member benefits
+                  Founding creator benefits
                 </p>
                 <ul className="space-y-2">
                   {foundingBenefits.map((b) => (
                     <li key={b} className="flex items-start gap-2.5">
-                      <span className="text-primary mt-0.5 text-xs">✓</span>
+                      <span className="text-primary mt-0.5 text-xs">{"\u2713"}</span>
                       <span className="text-sm text-text-secondary leading-relaxed">{b}</span>
                     </li>
                   ))}
@@ -161,10 +161,10 @@ export default function WaitlistForm() {
                         <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
                         <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
                       </svg>
-                      Joining…
+                      Joining{"\u2026"}
                     </span>
                   ) : (
-                    "Become a founding member 🌶️"
+                    "Become a founding creator \ud83c\udf36\ufe0f"
                   )}
                 </button>
 

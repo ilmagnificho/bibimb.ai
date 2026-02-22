@@ -92,10 +92,10 @@ export default function StickySignup() {
               ) : (
                 <>
                   <p className="text-[14px] font-semibold leading-tight">
-                    🥬 Free slots filling up.
+                    🚀 Deploy my agent — Join free
                   </p>
                   <p className="text-[13px] text-white/50 mt-0.5">
-                    Join free — founding member benefits included.
+                    Founding creator benefits included.
                   </p>
                 </>
               )}

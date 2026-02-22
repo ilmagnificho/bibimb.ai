@@ -7,33 +7,33 @@ const steps = [
   {
     step: "01",
     emoji: "🚀",
-    title: "Deploy your agent",
+    title: "Deploy in 5 minutes",
     description:
-      "Creators list their AI agent and choose how many free slots to offer (5–50) and a target price. Trust building starts here.",
+      "List your agent. Set your free tier (5–50 users) and target price ($0–$99). That's it. We generate the trust tiers automatically.",
     tag: "For Creators",
   },
   {
     step: "02",
     emoji: "🥬",
-    title: "First users try free",
+    title: "First users test for free",
     description:
-      "Early adopters get the agent for free — the Namul tier. They use it, test it, and leave the first real reviews.",
+      "Your first users get the agent free — the Namul tier. They use it for real work and leave honest reviews. No fake signups.",
     tag: "Namul tier",
   },
   {
     step: "03",
     emoji: "📈",
-    title: "Trust builds, price rises",
+    title: "Reviews build trust. Price rises.",
     description:
-      "As real reviews accumulate, the price steps up naturally. Each tier reflects growing confidence — from free to target price.",
-    tag: "Trust → Value",
+      "As real reviews come in, the next pricing tier unlocks. Each tier is earned by the trust your previous users created.",
+    tag: "Trust → Revenue",
   },
   {
     step: "04",
-    emoji: "🌊",
-    title: "A trust economy grows",
+    emoji: "💰",
+    title: "You earn. Community grows.",
     description:
-      "Agents with real trust earn steady revenue. Users know what they're paying for. Zero creator fees for founding members.",
+      "When trust is established, you earn steady revenue with zero platform fees. Your agent has a real track record — verified by the community.",
     tag: "For Everyone",
   },
 ];
@@ -43,11 +43,11 @@ export default function HowItWorks() {
     <SectionWrapper id="how-it-works">
       <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12">
         <h2 className="font-display font-bold text-[2rem] md:text-[2.4rem] text-text-primary leading-tight max-w-sm">
-          How trust gets built
+          How creators start earning
         </h2>
         <p className="text-text-secondary max-w-xs md:text-right text-[15px] leading-relaxed">
-          Every agent starts at zero trust.<br />
-          Bibimb.ai gives it a path to earn it.
+          Every agent starts at zero.<br />
+          Bibimb.ai gives you the path from zero to revenue.
         </p>
       </div>
 

@@ -6,46 +6,41 @@ function scrollToWaitlist() {
   document.getElementById("waitlist")?.scrollIntoView({ behavior: "smooth" });
 }
 
-// 히어로 우측에 보여줄 에이전트 카드 미리보기 데이터
-const PREVIEW_AGENTS = [
+// Creator journey cards — 에이전트 성장 경로를 보여주는 3단계
+const JOURNEY_CARDS = [
   {
-    emoji: "📝",
+    stage: "Just launched",
+    emoji: "\ud83d\udcdd",
     name: "BlogDraft AI",
     tagline: "SEO blog posts in 60 seconds",
-    category: "Writing & Content",
-    freeLeft: 3,
-    totalFree: 5,
-    rating: null, // 아직 리뷰 없음 — 솔직하게 표현
-    price: "$0",
-    isFree: true,
+    detail: "\ud83e\udd6c 3 free spots left \u00b7 No reviews yet",
+    status: "Gathering first believers",
+    accent: "text-green",
+    bg: "bg-green/8",
   },
   {
-    emoji: "🔍",
+    stage: "Building trust",
+    emoji: "\ud83d\udd0d",
     name: "LeadRadar",
     tagline: "Find & qualify leads automatically",
-    category: "Marketing & Sales",
-    freeLeft: 0,
-    totalFree: 5,
-    rating: 4.8,
-    reviews: 5,
-    price: "$8.70",
-    isFree: false,
+    detail: "\u2605 4.8 (5 reviews) \u00b7 $8.70/user",
+    status: "Trust earned, revenue started",
+    accent: "text-secondary",
+    bg: "bg-secondary-light/40",
   },
   {
-    emoji: "🛠️",
+    stage: "Scaled",
+    emoji: "\ud83d\udee0\ufe0f",
     name: "CodeReviewer Pro",
     tagline: "Catch bugs before your team does",
-    category: "Code & Dev",
-    freeLeft: 2,
-    totalFree: 10,
-    rating: 4.6,
-    reviews: 8,
-    price: "$0",
-    isFree: true,
+    detail: "\u2605 4.6 (48 reviews) \u00b7 $29/user \u00b7 200+ users",
+    status: "Earning steady revenue",
+    accent: "text-primary",
+    bg: "bg-primary-light/60",
   },
 ];
 
-function AgentCard({ agent, delay }: { agent: typeof PREVIEW_AGENTS[0]; delay: number }) {
+function JourneyCard({ card, delay }: { card: typeof JOURNEY_CARDS[0]; delay: number }) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -53,50 +48,33 @@ function AgentCard({ agent, delay }: { agent: typeof PREVIEW_AGENTS[0]; delay: n
       transition={{ duration: 0.5, delay }}
       className="bg-white rounded-2xl p-4 border border-border/70 shadow-sm hover:shadow-md transition-shadow"
     >
+      {/* Stage label */}
+      <div className="flex items-center justify-between mb-3">
+        <span className={`text-[10px] font-bold uppercase tracking-widest ${card.accent}`}>
+          {card.stage}
+        </span>
+      </div>
+
       <div className="flex items-start gap-3">
-        <div className="w-10 h-10 rounded-xl bg-primary-light/60 flex items-center justify-center text-xl shrink-0">
-          {agent.emoji}
+        <div className={`w-10 h-10 rounded-xl ${card.bg} flex items-center justify-center text-xl shrink-0`}>
+          {card.emoji}
         </div>
         <div className="flex-1 min-w-0">
-          <div className="flex items-center justify-between gap-2">
-            <p className="font-display font-bold text-[14px] text-text-primary leading-tight truncate">
-              {agent.name}
-            </p>
-            <span
-              className={`text-[11px] font-bold shrink-0 ${
-                agent.isFree ? "text-green" : "text-primary"
-              }`}
-            >
-              {agent.price}
-            </span>
-          </div>
+          <p className="font-display font-bold text-[14px] text-text-primary leading-tight truncate">
+            {card.name}
+          </p>
           <p className="text-[12px] text-text-secondary mt-0.5 leading-snug">
-            {agent.tagline}
+            {card.tagline}
           </p>
         </div>
       </div>
 
       <div className="flex items-center justify-between mt-3 pt-3 border-t border-border/50">
-        {/* 왼쪽: 리뷰 or 아직 없음 */}
-        <div className="flex items-center gap-1">
-          {agent.rating ? (
-            <>
-              <span className="text-[11px] text-secondary font-bold">★ {agent.rating}</span>
-              <span className="text-[11px] text-text-secondary/50">({agent.reviews})</span>
-            </>
-          ) : (
-            <span className="text-[11px] text-text-secondary/50 italic">No reviews yet</span>
-          )}
-        </div>
-        {/* 오른쪽: 남은 무료 슬롯 */}
-        {agent.freeLeft > 0 ? (
-          <span className="text-[11px] font-semibold text-green bg-green/8 px-2 py-0.5 rounded-full">
-            🥬 {agent.freeLeft} free left
-          </span>
-        ) : (
-          <span className="text-[11px] text-text-secondary/40">Free tier full</span>
-        )}
+        <span className="text-[11px] text-text-secondary/70">{card.detail}</span>
       </div>
+      <p className="text-[11px] text-text-secondary/50 mt-1.5 italic">
+        {card.status}
+      </p>
     </motion.div>
   );
 }
@@ -110,7 +88,7 @@ export default function Hero() {
         {/* 2-column layout on md+ */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center">
 
-          {/* ── 좌측: 카피 ── */}
+          {/* -- Left: Copy -- */}
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
@@ -120,21 +98,21 @@ export default function Hero() {
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-primary/20 bg-primary-light/60 mb-7">
               <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
               <span className="text-xs font-semibold text-primary tracking-wide uppercase">
-                Pre-launch · Founding members wanted
+                Pre-launch &middot; Founding creators wanted
               </span>
             </div>
 
             <h1 className="font-display font-extrabold text-[2.6rem] md:text-[3.6rem] leading-[1.08] text-text-primary tracking-tight">
-              Where AI agents<br />
-              earn their first <span className="text-primary">trust.</span>
+              Where AI agent creators<br />
+              come to <span className="text-primary">earn.</span>
             </h1>
 
             <p className="mt-6 text-[1.05rem] md:text-[1.1rem] leading-[1.75] text-text-secondary">
-              Thousands of AI agents launch every week.<br />
-              Most die without a single real user.<br />
+              You built something great. But GPT Store pays nothing.<br />
+              Going solo is exhausting.{" "}
               <span className="text-text-primary font-semibold">
-                Bibimb.ai gives every agent its first believers —<br />
-                free trials, real reviews, trust that compounds.
+                Bibimb.ai is where agent creators
+                get their first users, first reviews, and first revenue — together.
               </span>
             </p>
 
@@ -143,13 +121,13 @@ export default function Hero() {
                 onClick={scrollToWaitlist}
                 className="px-7 py-3.5 bg-primary text-white font-semibold rounded-[12px] hover:bg-primary-hover transition-colors text-[15px] cursor-pointer"
               >
-                Try agents for free 🥬
+                Deploy my agent \ud83d\ude80
               </button>
               <button
                 onClick={scrollToWaitlist}
                 className="px-7 py-3.5 border-2 border-border text-text-primary font-semibold rounded-[12px] hover:border-primary/40 transition-colors text-[15px] cursor-pointer"
               >
-                Deploy my agent 🚀
+                Try agents for free \ud83e\udd6c
               </button>
             </div>
 
@@ -161,9 +139,9 @@ export default function Hero() {
               transition={{ delay: 0.35, duration: 0.5 }}
             >
               {[
-                { val: "FREE", label: "First users of every agent", sub: "Namul tier 🥬" },
-                { val: "5–50", label: "Free slots, your choice", sub: "Creator-controlled" },
-                { val: "0%", label: "Creator fees at launch", sub: "Founding members" },
+                { val: "5\u201350", label: "real users guaranteed", sub: "your first believers" },
+                { val: "0%", label: "platform fees", sub: "for founding creators" },
+                { val: "$0\u2013$99", label: "you set your price", sub: "we handle the tiers" },
               ].map((s) => (
                 <div key={s.label}>
                   <p className="font-display font-bold text-[1.5rem] text-text-primary">{s.val}</p>
@@ -174,9 +152,9 @@ export default function Hero() {
             </motion.div>
           </motion.div>
 
-          {/* ── 우측: 에이전트 카드 미리보기 ── */}
+          {/* -- Right: Creator journey cards -- */}
           <div className="flex flex-col gap-3">
-            {/* 상단 레이블 */}
+            {/* Top label */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -184,25 +162,25 @@ export default function Hero() {
               className="flex items-center justify-between mb-1"
             >
               <span className="text-[11px] font-bold uppercase tracking-widest text-text-secondary/40">
-                Coming at launch
+                Your agent&apos;s journey on Bibimb.ai
               </span>
               <span className="text-[11px] text-text-secondary/40">
                 Preview only
               </span>
             </motion.div>
 
-            {PREVIEW_AGENTS.map((agent, i) => (
-              <AgentCard key={agent.name} agent={agent} delay={0.3 + i * 0.12} />
+            {JOURNEY_CARDS.map((card, i) => (
+              <JourneyCard key={card.name} card={card} delay={0.3 + i * 0.12} />
             ))}
 
-            {/* 하단 힌트 */}
+            {/* Bottom hint */}
             <motion.p
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.7, duration: 0.4 }}
               className="text-center text-[12px] text-text-secondary/40 mt-1"
             >
-              + more agents at launch · all start with free slots
+              Every agent starts at Card 1. Community takes you to Card 3.
             </motion.p>
           </div>
 

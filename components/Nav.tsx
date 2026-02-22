@@ -64,14 +64,14 @@ export default function Nav() {
               onClick={scrollToWaitlist}
               className="px-4 py-2 bg-primary text-white font-semibold rounded-[10px] hover:bg-primary-hover transition-colors text-[14px] cursor-pointer whitespace-nowrap"
             >
-              Join free →
+              Join as creator →
             </button>
           ) : (
             <Link
               href="/#waitlist"
               className="px-4 py-2 bg-primary text-white font-semibold rounded-[10px] hover:bg-primary-hover transition-colors text-[14px] whitespace-nowrap"
             >
-              Join free →
+              Join as creator →
             </Link>
           )}
         </div>
