@@ -17,7 +17,7 @@ const steps = [
     emoji: "🥬",
     title: "Fellow builders test your agent",
     description:
-      "Community members try your agent for real work — not random strangers, but builders who know what good looks like.",
+      "Community members try your agent for real work — not random strangers, but builders who give honest, useful feedback.",
     tag: "Namul tier",
   },
   {

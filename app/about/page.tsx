@@ -5,7 +5,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "About — Bibimb.ai",
-  description: "Learn about Bibimb.ai — the monetization-first community where AI agent creators get their first users, reviews, and revenue.",
+  description: "Why I built Bibimb.ai — a community where AI agent builders help each other get first users, honest reviews, and real revenue. Founded by Yoongjae Cho.",
 };
 
 export default function AboutPage() {
@@ -13,135 +13,152 @@ export default function AboutPage() {
     <>
       <Nav />
       <main className="bg-bg min-h-screen">
-        <div className="mx-auto max-w-[720px] px-6 py-16 md:py-24">
 
-          {/* Header */}
-          <div className="mb-14">
-            <span className="text-xs font-bold uppercase tracking-widest text-primary">About</span>
-            <h1 className="font-display font-extrabold text-[2.2rem] md:text-[3rem] leading-[1.1] text-text-primary mt-3 mb-5">
-              We built Bibimb.ai<br />
-              because no one should<br />
-              build alone.
-            </h1>
-            <p className="text-[1.05rem] leading-[1.8] text-text-secondary">
-              Bibimb.ai is a community of agent builders who believe great agents
-              shouldn&apos;t die invisible. We help each other get first users, honest
-              reviews, and real revenue &mdash; through trust-based pricing and zero
-              gatekeeping.
+        {/* "Why I Built This" essay */}
+        <section className="max-w-[680px] mx-auto px-6 pt-20 pb-16">
+          <h1 className="font-display font-bold text-[2.2rem] md:text-[2.8rem] text-text-primary leading-tight mb-8">
+            Why I Built Bibimb.ai
+          </h1>
+
+          <div className="space-y-5 text-[15px] md:text-[16px] text-text-secondary leading-relaxed">
+            <p>
+              I invest in early-stage startups for a living. I run TETRA Corp in Seoul,
+              manage an angel syndicate, and spend most of my time helping Korean founders
+              figure out how to go from zero to one.
+            </p>
+            <p>
+              But here&apos;s the thing that kept bothering me.
+            </p>
+            <p>
+              I&apos;ve watched dozens of builders create genuinely useful AI tools &mdash; agents
+              that save people hours, automate real work, solve actual problems. And then
+              nothing happens. No users. No revenue. The agent sits there, invisible.
+            </p>
+            <p>
+              The tools to build AI agents have never been better. Claude Code, n8n, CrewAI,
+              MindStudio &mdash; anyone with a laptop and an idea can ship something in a weekend.
+              Building is no longer the hard part.{" "}
+              <strong className="text-text-primary">
+                Getting your first five real users? That&apos;s where everyone gets stuck.
+              </strong>
+            </p>
+            <p>
+              I saw this pattern over and over: talented people building alone, burning out
+              alone, and quitting alone. Meanwhile, GPT Store promised monetization and
+              delivered nothing for most creators &mdash; $0 revenue even for builders with a
+              million users.
+            </p>
+            <p>
+              I&apos;m not an AI engineer. I&apos;m not going to pretend I&apos;ve shipped
+              50 agents myself. What I do know is how ecosystems work. I&apos;ve spent years
+              studying why some creators thrive while others burn out. The answer is almost
+              never &ldquo;build a better product.&rdquo; It&apos;s almost always{" "}
+              <strong className="text-text-primary">
+                &ldquo;find the right people.&rdquo;
+              </strong>
+            </p>
+            <p>
+              That&apos;s why I built Bibimb.ai.
+            </p>
+            <p>
+              Not another marketplace. Not another app store. A community where agent builders
+              actually help each other succeed &mdash; testing each other&apos;s work, sharing what
+              pricing works, showing up as each other&apos;s first real users.
+            </p>
+            <p>
+              The name comes from bibimbap, the Korean mixed rice bowl. Every ingredient is
+              different, but the dish only works when everything comes together. That&apos;s what
+              I want for agent creators: a place where different builders, different skills,
+              different agents all mix together into something greater than the sum of its parts.
+            </p>
+            <p>
+              We&apos;re small. We&apos;re early. The founding crew is still forming. If
+              you&apos;re building an agent and tired of doing it alone, I&apos;d genuinely
+              love to have you.
             </p>
           </div>
+
+          {/* Founder card */}
+          <div className="mt-12 pt-8 border-t border-border">
+            <p className="font-display font-bold text-lg text-text-primary">
+              Yoongjae Cho
+            </p>
+            <p className="text-sm text-text-secondary mt-1">
+              Founder, Bibimb.ai &middot; CEO, TETRA Corp &middot; GP, Joyakdol Angel Syndicate
+            </p>
+            <p className="text-sm text-text-secondary mt-3">
+              Invests in early-stage Korean startups. Writes about venture and building at{" "}
+              <a href="https://yoongjae.com" target="_blank" rel="noopener noreferrer"
+                 className="text-primary hover:underline">yoongjae.com</a>
+            </p>
+            <div className="flex flex-wrap gap-4 mt-3 text-sm">
+              <a href="mailto:cho@yoongjae.com" className="text-text-secondary hover:text-primary transition-colors">
+                cho@yoongjae.com
+              </a>
+              <a href="https://www.linkedin.com/in/yjcho/" target="_blank" rel="noopener noreferrer"
+                 className="text-text-secondary hover:text-primary transition-colors">LinkedIn</a>
+              <a href="https://www.threads.com/@ilmagnificho" target="_blank" rel="noopener noreferrer"
+                 className="text-text-secondary hover:text-primary transition-colors">Threads</a>
+            </div>
+          </div>
+        </section>
+
+        <div className="mx-auto max-w-[720px] px-6 pb-16">
 
           {/* The Problem */}
           <div className="mb-10">
             <h2 className="font-display font-bold text-[1.4rem] text-text-primary mb-4">
-              The trust gap
+              The problem
             </h2>
             <div className="space-y-4 text-text-secondary text-[15px] leading-[1.8]">
               <p>
-                <strong className="text-text-primary">For users:</strong> How do you trust an AI agent
-                you&apos;ve never heard of? There are no reviews, no track record, no way to know if
-                it&apos;s worth your time or money. So you stick with the big names — even when smaller
-                agents might work better for your specific needs.
+                <strong className="text-text-primary">90% die:</strong> Indie agents die invisible
+                within 90 days. No users, no reviews, no trust, no growth.
               </p>
               <p>
-                <strong className="text-text-primary">For creators:</strong> You built something great.
-                But getting your first 5 real users is nearly impossible. App stores bury you.
-                Product Hunt gives you one day of attention. And paid ads cost more than your agent earns.
+                <strong className="text-text-primary">$0 revenue:</strong> GPT Store promised
+                monetization but delivered nothing for most creators &mdash; US-only, invite-only.
+                One builder has 1M users and $0 revenue.
               </p>
               <p>
-                <strong className="text-text-primary">The result:</strong> A massive trust gap.
-                Great agents die invisible. Users miss out on tools that could genuinely help them.
-                The AI agent economy stays broken.
+                <strong className="text-text-primary">Solo burnout:</strong> Gumroad + Stripe +
+                marketing + support + reviews. All alone. No leverage. Talented people building,
+                burning out, and quitting alone.
               </p>
             </div>
           </div>
 
-          {/* Our Solution */}
-          <div className="bg-primary-light/30 rounded-2xl p-7 mb-10 border border-primary/10">
-            <p className="text-2xl mb-3">🍚</p>
-            <h2 className="font-display font-bold text-xl text-text-primary mb-3">
-              How Bibimb.ai fixes this
+          {/* How It Works */}
+          <div className="mb-10">
+            <h2 className="font-display font-bold text-[1.4rem] text-text-primary mb-4">
+              How it works
             </h2>
-            <p className="text-text-secondary leading-[1.8] text-[15px]">
+            <p className="text-text-secondary leading-[1.8] text-[15px] mb-4">
               Every agent on Bibimb.ai starts with free users. Creators choose how many
               free slots to offer (5 to 50). Those first users try the agent for free,
               leave real reviews, and build the trust foundation. Then, as trust grows,
-              the price steps up naturally — from free to the creator&apos;s target price.
+              the price steps up naturally &mdash; from free to the creator&apos;s target price.
             </p>
-            <p className="text-text-secondary leading-[1.8] text-[15px] mt-3">
+            <p className="text-text-secondary leading-[1.8] text-[15px]">
               We call it <strong className="text-text-primary">trust-based pricing</strong>.
-              Like bibimbap — the bowl starts simple, and as more ingredients
+              Like bibimbap &mdash; the bowl starts simple, and as more ingredients
               (users, reviews, trust) are added, it becomes richer and more valuable.
             </p>
           </div>
 
-          {/* The Bibimbap Metaphor */}
+          {/* Why Bibimbap */}
           <div className="mb-10">
             <h2 className="font-display font-bold text-[1.4rem] text-text-primary mb-4">
               Why &ldquo;bibimbap&rdquo;?
             </h2>
             <p className="text-text-secondary leading-[1.8] text-[15px]">
               Bibimbap is a Korean dish that starts as a simple bowl of rice. You add
-              ingredients one by one — namul (vegetables), gochujang (spicy paste),
-              egg, meat — until it becomes a rich, complete meal. Our pricing model
+              ingredients one by one &mdash; namul (vegetables), gochujang (spicy paste),
+              egg, meat &mdash; until it becomes a rich, complete meal. Our pricing model
               works the same way: every agent starts free (Namul tier), and as more
               users join and leave reviews, the value and price grow together through
               Gochujang, Bibim, Dolsot, and finally Jeongsik (the full course).
             </p>
-          </div>
-
-          {/* For Creators */}
-          <div className="mb-10">
-            <h2 className="font-display font-bold text-[1.4rem] text-text-primary mb-4">
-              For agent creators
-            </h2>
-            <p className="text-text-secondary leading-[1.8] text-[15px] mb-4">
-              You&apos;re not deploying into a void &mdash; you&apos;re deploying into a community
-              of builders who will test, review, and champion your agent. Set two things:
-              how many free trial slots (5&ndash;50) and your target price ($0&ndash;$99).
-              We auto-calculate the intermediate tiers. You control the economics.
-            </p>
-            <div className="bg-secondary-light/40 rounded-xl p-5 border border-secondary/15">
-              <p className="font-display font-bold text-[15px] text-text-primary mb-2">
-                💸 Founding creator benefits
-              </p>
-              <ul className="space-y-1.5 text-sm text-text-secondary">
-                <li className="flex items-start gap-2">
-                  <span className="text-secondary mt-0.5">✓</span>
-                  <span>0% platform fee — forever, for founding creators</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-secondary mt-0.5">✓</span>
-                  <span>Priority placement in agent discovery</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-secondary mt-0.5">✓</span>
-                  <span>Direct feedback channel with the team</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          {/* Market Context */}
-          <div className="mb-10">
-            <h2 className="font-display font-bold text-[1.4rem] text-text-primary mb-4">
-              Why now?
-            </h2>
-            <div className="space-y-4 text-text-secondary text-[15px] leading-[1.8]">
-              <p>
-                The GPT Store promised democratized monetization but delivered $0 for most
-                creators. US-only payouts, invite-only programs, and zero transparency left
-                builders with millions of users but no revenue.
-              </p>
-              <p>
-                Existing marketplaces focus on discovery, not trust. Crypto-based approaches
-                add friction that kills adoption. Enterprise platforms exclude indie creators entirely.
-              </p>
-              <p>
-                Bibimb.ai fills the gap: a community-first platform where creators earn through
-                community-verified trust &mdash; not marketing budgets or platform gatekeeping.
-              </p>
-            </div>
           </div>
 
           {/* Disclaimer */}
@@ -153,7 +170,7 @@ export default function AboutPage() {
               Bibimb.ai is currently in pre-launch / waitlist phase. The platform,
               pricing tiers, and features described on this site are subject to change
               before official launch. The pricing demo on the homepage is a simulation
-              only — no actual purchases are being processed. By joining the waitlist,
+              only &mdash; no actual purchases are being processed. By joining the waitlist,
               you are expressing interest only. No payment information is collected at
               this stage.
             </p>
@@ -164,35 +181,19 @@ export default function AboutPage() {
             </p>
           </div>
 
-          {/* Contact */}
-          <div className="border-t border-border pt-10 mb-10">
-            <h2 className="font-display font-bold text-[1.1rem] text-text-primary mb-3">
-              Contact
-            </h2>
-            <p className="text-text-secondary text-sm leading-[1.8]">
-              Questions, partnership inquiries, or just want to say hi?
-            </p>
-            <a
-              href="mailto:info@tetracorp.co.kr"
-              className="inline-block mt-3 text-primary font-semibold hover:text-primary-hover transition-colors text-sm"
-            >
-              info@tetracorp.co.kr →
-            </a>
-          </div>
-
           {/* CTA */}
           <div className="bg-[#F5F0EB] rounded-2xl p-8 text-center">
             <p className="font-display font-bold text-xl text-text-primary mb-2">
-              Ready to be a founding creator?
+              Ready to join the founding crew?
             </p>
             <p className="text-text-secondary text-sm mb-5">
-              Join the waitlist. Help shape the future of AI agent monetization.
+              Help shape the future of AI agent monetization.
             </p>
             <Link
               href="/#waitlist"
               className="inline-block px-8 py-3.5 bg-primary text-white font-semibold rounded-[12px] hover:bg-primary-hover transition-colors text-[15px]"
             >
-              Become a founding creator →
+              Join the founding crew &rarr;
             </Link>
           </div>
 

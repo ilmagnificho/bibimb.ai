@@ -213,7 +213,7 @@ export default function CreatorDemo() {
             onClick={scrollToWaitlist}
             className="px-8 py-3.5 bg-primary text-white font-semibold rounded-[12px] hover:bg-primary-hover transition-colors text-[15px] cursor-pointer"
           >
-            Like what you see? Join as founding creator {"\u2192"}
+            Like what you see? Join the founding crew {"\u2192"}
           </button>
           <p className="text-center text-xs text-text-secondary/50 mt-4">
             Simulation only &mdash; real pricing launches with the community.

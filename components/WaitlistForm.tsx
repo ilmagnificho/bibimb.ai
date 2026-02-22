@@ -8,7 +8,7 @@ type Role = "creator" | "adopter" | "both";
 type Status = "idle" | "loading" | "success" | "error";
 
 const roles: { value: Role; label: string; sub: string }[] = [
-  { value: "creator", label: "\ud83e\uddd1\u200d\ud83c\udf73  Agent Creator \u2014 I\u2019m building an AI agent", sub: "Get your first real users and reviews, free" },
+  { value: "creator", label: "\ud83e\uddd1\u200d\ud83c\udf73  Agent Creator \u2014 I build (or want to build) AI agents", sub: "Get your first real users and reviews, free" },
   { value: "adopter", label: "\ud83d\udc64  Early Adopter \u2014 I want to try AI agents", sub: "Get free access to agents before anyone else" },
   { value: "both", label: "\ud83e\udd62  Both \u2014 I build and I try", sub: "The full bibimbap experience" },
 ];
@@ -63,14 +63,36 @@ export default function WaitlistForm() {
               initial={{ opacity: 0, scale: 0.96 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.35 }}
-              className="text-center py-14"
+              className="text-center py-10"
             >
               <p className="text-5xl mb-5">{"\ud83c\udf5a"}</p>
               <h3 className="font-display font-bold text-2xl text-text-primary mb-2">
-                Welcome, founding creator.
+                Welcome to the founding crew.
               </h3>
-              <p className="text-text-secondary">
-                {message || "We\u2019ll notify you at launch \u2014 with founding creator benefits reserved."}
+              <p className="text-text-secondary mb-6">
+                Here&apos;s what happens next:
+              </p>
+
+              <div className="text-left max-w-sm mx-auto space-y-3 mb-8">
+                {[
+                  "Welcome email within 24 hours",
+                  "Discord invite (founding members only)",
+                  "Weekly Showcase \u2014 see what others are building",
+                ].map((item) => (
+                  <div key={item} className="flex items-start gap-2.5">
+                    <span className="text-primary text-xs mt-1">{"\u2713"}</span>
+                    <span className="text-sm text-text-secondary leading-relaxed">{item}</span>
+                  </div>
+                ))}
+              </div>
+
+              <p className="text-[13px] text-text-secondary/60 italic">
+                Questions? Email{" "}
+                <a href="mailto:cho@yoongjae.com" className="text-primary hover:underline">
+                  cho@yoongjae.com
+                </a>
+                {" "}&mdash; I read every one.
+                <br />&mdash; Yoongjae
               </p>
             </motion.div>
           ) : (
@@ -164,7 +186,7 @@ export default function WaitlistForm() {
                       Joining{"\u2026"}
                     </span>
                   ) : (
-                    "Become a founding creator \ud83c\udf36\ufe0f"
+                    "Join the founding crew \ud83c\udf36\ufe0f"
                   )}
                 </button>
 

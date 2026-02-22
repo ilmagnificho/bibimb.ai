@@ -82,7 +82,7 @@ export default function TrustProblem() {
       >
         <span className="text-3xl shrink-0">{"\ud83c\udf5a"}</span>
         <p className="text-[15px] text-text-primary font-medium text-center sm:text-left leading-relaxed">
-          That&apos;s why we&apos;re building Bibimb.ai. A community where builders give each other{" "}
+          That&apos;s why we built this. A community where builders give each other{" "}
           <span className="font-bold text-primary">first users</span>,{" "}
           <span className="font-bold text-primary">honest reviews</span>, and a{" "}
           <span className="font-bold text-primary">real path to revenue</span>.

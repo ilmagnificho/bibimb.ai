@@ -43,8 +43,8 @@ export default function CommunityJoin() {
             Better together
           </span>
           <h2 className="font-display font-bold text-[2rem] md:text-[2.4rem] text-text-primary mb-4 leading-tight">
-            Built by builders.<br />
-            For builders. No gatekeepers.
+            You don&apos;t have to build<br />
+            alone anymore.
           </h2>
           <p className="text-text-secondary max-w-lg mx-auto text-[15px] leading-relaxed">
             We believe great agents shouldn&apos;t die invisible. So we test each
@@ -75,13 +75,38 @@ export default function CommunityJoin() {
         ))}
       </div>
 
+      {/* Activity preview */}
+      <motion.div
+        initial={{ opacity: 0, y: 12 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.4, delay: 0.25 }}
+        className="bg-white rounded-2xl border border-border/70 p-5 mt-6 mb-10"
+      >
+        <p className="text-[11px] font-bold uppercase tracking-widest text-text-secondary/40 mb-3">
+          What the founding crew does
+        </p>
+        <div className="space-y-2.5">
+          {[
+            { icon: "\ud83d\udcc5", text: "Weekly Showcase \u2014 one builder demos their agent live" },
+            { icon: "\ud83d\udcb0", text: "Monthly Revenue Check-in \u2014 share numbers openly" },
+            { icon: "\ud83e\uddea", text: "Test Swaps \u2014 try each other\u2019s agents and give honest feedback" },
+          ].map((item) => (
+            <div key={item.text} className="flex items-start gap-2.5">
+              <span className="text-sm mt-0.5">{item.icon}</span>
+              <p className="text-[13px] text-text-secondary leading-relaxed">{item.text}</p>
+            </div>
+          ))}
+        </div>
+      </motion.div>
+
       {/* CTA */}
       <div className="text-center">
         <button
           onClick={scrollToWaitlist}
           className="px-8 py-3.5 bg-primary text-white font-semibold rounded-[12px] hover:bg-primary-hover transition-colors text-[15px] cursor-pointer"
         >
-          Become a founding creator {"\u2192"}
+          Join the founding crew {"\u2192"}
         </button>
       </div>
     </SectionWrapper>

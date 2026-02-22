@@ -9,18 +9,18 @@ function scrollToWaitlist() {
 // Real quotes from real forums — actual pain points from agent creators
 const BUILDER_VOICES = [
   {
-    quote: "I have over 1M users on my GPT and still $0 revenue. I\u2019ve been mass-paying server costs out of pocket for 2 years.",
-    source: "OpenAI Community Forum",
+    quote: "I have over 1M users on my GPT and still $0 revenue. I\u2019ve been paying server costs out of pocket for 2 years.",
+    source: "GPT builder, OpenAI Forum",
     emoji: "\ud83d\ude29",
   },
   {
-    quote: "Built an agent I\u2019m really proud of. No idea how to get my first 5 real users. App stores bury you. Paid ads cost more than I\u2019d ever earn.",
-    source: "r/SideProject",
+    quote: "Built an agent I\u2019m really proud of. No idea how to get my first 5 real users. App stores bury you.",
+    source: "indie builder on Reddit",
     emoji: "\ud83e\udee0",
   },
   {
-    quote: "GPT Store monetization is US-only and invite-only. I\u2019m in Europe. What are my options? Basically none.",
-    source: "Hacker News",
+    quote: "GPT Store monetization is US-only and invite-only. I\u2019m in Europe. What are my options?",
+    source: "developer on Hacker News",
     emoji: "\ud83c\udf0d",
   },
 ];
@@ -70,14 +70,14 @@ export default function Hero() {
             </div>
 
             <h1 className="font-display font-extrabold text-[2.6rem] md:text-[3.6rem] leading-[1.08] text-text-primary tracking-tight">
-              Where agent builders<br />
-              earn &mdash; <span className="text-primary">together.</span>
+              For the builders who<br />
+              refuse to earn <span className="text-primary">$0.</span>
             </h1>
 
             <p className="mt-6 text-[1.05rem] md:text-[1.1rem] leading-[1.75] text-text-secondary">
-              GPT Store pays nothing. Going solo is exhausting.<br />
+              AI agent tools are everywhere. Revenue isn&apos;t.<br />
               <span className="text-text-primary font-semibold">
-                Get your first users, first reviews, and first revenue &mdash; as a community.
+                Join the community where builders help each other earn.
               </span>
             </p>
 
@@ -86,13 +86,13 @@ export default function Hero() {
                 onClick={scrollToWaitlist}
                 className="px-7 py-3.5 bg-primary text-white font-semibold rounded-[12px] hover:bg-primary-hover transition-colors text-[15px] cursor-pointer"
               >
-                Deploy my agent {"\ud83d\ude80"}
+                Join the founding crew {"\ud83e\udd1d"}
               </button>
               <button
-                onClick={scrollToWaitlist}
+                onClick={() => document.getElementById("how-it-works")?.scrollIntoView({ behavior: "smooth" })}
                 className="px-7 py-3.5 border-2 border-border text-text-primary font-semibold rounded-[12px] hover:border-primary/40 transition-colors text-[15px] cursor-pointer"
               >
-                Try agents for free {"\ud83e\udd6c"}
+                See how it works {"\u2193"}
               </button>
             </div>
 
@@ -104,9 +104,9 @@ export default function Hero() {
               transition={{ delay: 0.35, duration: 0.5 }}
             >
               {[
-                { val: "5\u201350", label: "real users guaranteed" },
                 { val: "0%", label: "platform fees for founders" },
-                { val: "$0\u2013$99", label: "you set your price" },
+                { val: "100%", label: "of revenue goes to you" },
+                { val: "Day 1", label: "community access at launch" },
               ].map((s) => (
                 <div key={s.label}>
                   <p className="font-display font-bold text-[1.5rem] text-text-primary">{s.val}</p>
@@ -114,6 +114,20 @@ export default function Hero() {
                 </div>
               ))}
             </motion.div>
+
+            {/* Founder line */}
+            <motion.p
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.5, duration: 0.4 }}
+              className="mt-6 text-[13px] text-text-secondary/60"
+            >
+              Founded by{" "}
+              <a href="/about" className="text-text-secondary hover:text-primary transition-colors underline underline-offset-2">
+                Yoongjae Cho
+              </a>
+              {" "}&mdash; investor &amp; builder who kept watching great tools die with zero revenue.
+            </motion.p>
           </motion.div>
 
           {/* -- Right: Real builder voices -- */}

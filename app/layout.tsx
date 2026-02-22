@@ -15,22 +15,22 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Bibimb.ai \u2014 Where Agent Builders Earn Together",
+  title: "Bibimb.ai \u2014 For Builders Who Refuse to Earn $0",
   description:
-    "The community where AI agent creators get first users, honest reviews, and real revenue. Built by builders, for builders. Zero platform fees for founding members.",
+    "The community where AI agent creators get first users, honest reviews, and real revenue. Founded by Yoongjae Cho. Zero platform fees for founding members.",
   openGraph: {
-    title: "Bibimb.ai \u2014 Where Agent Builders Earn Together",
+    title: "Bibimb.ai \u2014 For Builders Who Refuse to Earn $0",
     description:
-      "GPT Store pays nothing. Going solo is exhausting. Bibimb.ai is the builder community where agent creators earn together through trust-based pricing.",
+      "AI agent tools are everywhere. Revenue isn\u2019t. Join the builder community where creators help each other earn through trust-based pricing.",
     url: "https://bibimb.ai",
     type: "website",
     images: [{ url: "/og-image.png", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Bibimb.ai \u2014 Where Agent Builders Earn Together",
+    title: "Bibimb.ai \u2014 For Builders Who Refuse to Earn $0",
     description:
-      "Your AI agent deserves its first believers. A builder community with trust-based pricing and zero platform fees.",
+      "Your AI agent deserves its first believers. A builder community with trust-based pricing and zero platform fees. Founded by Yoongjae Cho in Seoul.",
     images: ["/og-image.png"],
   },
 };
