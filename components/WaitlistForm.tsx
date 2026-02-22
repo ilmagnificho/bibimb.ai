@@ -15,9 +15,9 @@ const roles: { value: Role; label: string; sub: string }[] = [
 
 const foundingBenefits = [
   "0% creator fees \u2014 forever, for founding members",
-  "Priority listing when marketplace opens",
-  "Shape the platform with your direct feedback",
-  "Founding Creator badge on your profile",
+  "First access to community features as we build them",
+  "Shape the community with your direct feedback",
+  "Founding Crew badge on your profile",
 ];
 
 export default function WaitlistForm() {

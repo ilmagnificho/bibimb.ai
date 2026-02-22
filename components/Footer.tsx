@@ -12,7 +12,7 @@ export default function Footer() {
               🍚 Bibimb.ai
             </Link>
             <p className="text-sm text-text-secondary mt-2 max-w-[260px] leading-relaxed">
-              Where agent builders earn together — one bowl at a time.
+              The community where agent builders don&apos;t build alone.
             </p>
             <p className="text-xs text-text-secondary/50 mt-3">Built by Yoongjae Cho in Seoul</p>
           </div>

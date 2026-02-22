@@ -4,165 +4,36 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Terms of Service — Bibimb.ai",
+  description: "Terms of Service for Bibimb.ai",
 };
-
-const EFFECTIVE_DATE = "February 21, 2026";
-const COMPANY = "Tetra Corporation";
-const EMAIL = "info@tetracorp.co.kr";
-
-function Section({ title, children }: { title: string; children: React.ReactNode }) {
-  return (
-    <div className="mb-8">
-      <h2 className="font-display font-bold text-[1.1rem] text-text-primary mb-3">{title}</h2>
-      <div className="text-text-secondary text-sm leading-[1.85] space-y-3">{children}</div>
-    </div>
-  );
-}
 
 export default function TermsPage() {
   return (
     <>
       <Nav />
       <main className="bg-bg min-h-screen">
-        <div className="mx-auto max-w-[720px] px-6 py-16 md:py-24">
-          <div className="mb-12">
-            <span className="text-xs font-bold uppercase tracking-widest text-text-secondary">Legal</span>
-            <h1 className="font-display font-extrabold text-[2rem] md:text-[2.6rem] text-text-primary mt-3 mb-2">
-              Terms of Service
-            </h1>
-            <p className="text-text-secondary text-sm">Effective date: {EFFECTIVE_DATE}</p>
-          </div>
-
-          <Section title="1. Acceptance of Terms">
+        <section className="max-w-[680px] mx-auto px-6 pt-20 pb-16">
+          <h1 className="font-display font-bold text-[2.2rem] text-text-primary leading-tight mb-8">
+            Terms of Service
+          </h1>
+          <div className="space-y-5 text-[15px] text-text-secondary leading-relaxed">
             <p>
-              By accessing or using Bibimb.ai (the &quot;Service&quot;), operated by {COMPANY}
-              (&quot;we,&quot; &quot;us,&quot; or &quot;our&quot;), you agree to be bound by these Terms of Service.
-              If you do not agree to these terms, please do not use the Service.
+              Bibimb.ai is currently in pre-launch. Full Terms of Service will be
+              published before the platform opens to the public.
             </p>
             <p>
-              We reserve the right to update these terms at any time. Continued use of
-              the Service after changes constitutes acceptance of the new terms.
-            </p>
-          </Section>
-
-          <Section title="2. Description of Service">
-            <p>
-              Bibimb.ai is an AI agent trust marketplace that uses a trust-based tiered
-              pricing model. Early adopters can discover and try AI agents at reduced prices
-              (starting free), while agent creators can deploy their agents and earn revenue
-              as trust and adoption grow.
+              In the meantime, by joining the waitlist you agree to receive
+              occasional emails about Bibimb.ai&apos;s launch and community updates.
+              You can unsubscribe at any time.
             </p>
             <p>
-              The Service is currently in pre-launch / waitlist phase. Features and
-              pricing structures described are subject to change before official launch.
-            </p>
-          </Section>
-
-          <Section title="3. User Accounts">
-            <p>
-              To use certain features of the Service, you may be required to create an
-              account. You are responsible for maintaining the confidentiality of your
-              account credentials and for all activities that occur under your account.
-            </p>
-            <p>
-              You agree to provide accurate, current, and complete information and to
-              update your information as necessary. We reserve the right to suspend or
-              terminate accounts that violate these terms.
-            </p>
-          </Section>
-
-          <Section title="4. Early Adopter Terms">
-            <p>
-              As an early adopter (user), you agree that: (a) all purchases are final unless
-              the creator has a stated refund policy; (b) prices displayed at the time of
-              purchase are the prices you will pay; (c) free-tier (Namul tier) access
-              requires leaving an honest review within 14 days of use.
-            </p>
-          </Section>
-
-          <Section title="5. Agent Creator Terms">
-            <p>
-              As a creator deploying an agent, you agree that: (a) you own or have the
-              right to distribute the agent you list; (b) your agent does not infringe
-              any third-party intellectual property rights; (c) you will provide the
-              agent as described; (d) you are responsible for support for
-              your listed agents.
-            </p>
-            <p>
-              We reserve the right to remove listings that violate our policies or
-              applicable law, with or without notice.
-            </p>
-          </Section>
-
-          <Section title="6. Prohibited Conduct">
-            <p>You agree not to:</p>
-            <ul className="list-disc pl-5 space-y-1.5">
-              <li>Use the Service for any unlawful purpose</li>
-              <li>Post false, misleading, or fraudulent agent listings</li>
-              <li>Attempt to manipulate the pricing system through fake users or reviews</li>
-              <li>Reverse engineer, scrape, or otherwise extract data from the Service</li>
-              <li>Upload malware, viruses, or any harmful code</li>
-              <li>Harass, abuse, or harm other users</li>
-            </ul>
-          </Section>
-
-          <Section title="7. Intellectual Property">
-            <p>
-              The Bibimb.ai name, logo, and platform design are the intellectual
-              property of {COMPANY}. User-generated content (agent listings,
-              reviews) remains the property of the respective creators, but you grant
-              us a non-exclusive license to display such content on the Service.
-            </p>
-          </Section>
-
-          <Section title="8. Disclaimer of Warranties">
-            <p>
-              THE SERVICE IS PROVIDED &quot;AS IS&quot; WITHOUT WARRANTIES OF ANY KIND,
-              EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO WARRANTIES OF
-              MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND
-              NON-INFRINGEMENT. WE DO NOT WARRANT THAT THE SERVICE WILL BE
-              UNINTERRUPTED, ERROR-FREE, OR FREE OF VIRUSES.
-            </p>
-          </Section>
-
-          <Section title="9. Limitation of Liability">
-            <p>
-              TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, {COMPANY.toUpperCase()} SHALL
-              NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL,
-              OR PUNITIVE DAMAGES, INCLUDING LOSS OF PROFITS, DATA, OR GOODWILL,
-              ARISING OUT OF OR RELATED TO YOUR USE OF THE SERVICE.
-            </p>
-            <p>
-              OUR TOTAL LIABILITY TO YOU FOR ANY CLAIMS ARISING FROM OR RELATED
-              TO THESE TERMS OR THE SERVICE SHALL NOT EXCEED THE AMOUNT YOU PAID
-              TO US IN THE 12 MONTHS PRECEDING THE CLAIM, OR USD $100, WHICHEVER
-              IS GREATER.
-            </p>
-          </Section>
-
-          <Section title="10. Governing Law">
-            <p>
-              These Terms are governed by and construed in accordance with the laws
-              of the State of Delaware, USA, without regard to its conflict of law
-              principles.
-            </p>
-            <p>
-              We will first seek to resolve any dispute through good-faith negotiation.
-              If unresolved within 30 days, disputes shall be subject to the jurisdiction
-              of the state and federal courts located in Delaware, USA — or, by mutual
-              agreement, through binding arbitration under AAA Commercial Rules.
-            </p>
-          </Section>
-
-          <Section title="11. Contact">
-            <p>
-              For questions about these Terms, please contact us at:{" "}
-              <a href={`mailto:${EMAIL}`} className="text-primary hover:text-primary-hover underline">
-                {EMAIL}
+              Questions?{" "}
+              <a href="mailto:cho@yoongjae.com" className="text-primary hover:underline">
+                cho@yoongjae.com
               </a>
             </p>
-          </Section>
-        </div>
+          </div>
+        </section>
       </main>
       <Footer />
     </>
