@@ -9,23 +9,23 @@ const steps = [
     emoji: "🚀",
     title: "Deploy in 5 minutes",
     description:
-      "List your agent. Set your free tier (5–50 users) and target price ($0–$99). That's it. We generate the trust tiers automatically.",
+      "Set your free tier and target price. We auto-generate trust tiers.",
     tag: "For Creators",
   },
   {
     step: "02",
     emoji: "🥬",
-    title: "First users test for free",
+    title: "Fellow builders test your agent",
     description:
-      "Your first users get the agent free — the Namul tier. They use it for real work and leave honest reviews. No fake signups.",
+      "Community members try your agent for real work — not random strangers, but builders who know what good looks like.",
     tag: "Namul tier",
   },
   {
     step: "03",
     emoji: "📈",
-    title: "Reviews build trust. Price rises.",
+    title: "Peers review. Trust grows. Price rises.",
     description:
-      "As real reviews come in, the next pricing tier unlocks. Each tier is earned by the trust your previous users created.",
+      "Honest peer reviews unlock the next pricing tier. Trust earned, not bought.",
     tag: "Trust → Revenue",
   },
   {
@@ -33,7 +33,7 @@ const steps = [
     emoji: "💰",
     title: "You earn. Community grows.",
     description:
-      "When trust is established, you earn steady revenue with zero platform fees. Your agent has a real track record — verified by the community.",
+      "Steady revenue, zero platform fees. A track record verified by builders, not algorithms.",
     tag: "For Everyone",
   },
 ];
@@ -43,11 +43,11 @@ export default function HowItWorks() {
     <SectionWrapper id="how-it-works">
       <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12">
         <h2 className="font-display font-bold text-[2rem] md:text-[2.4rem] text-text-primary leading-tight max-w-sm">
-          How creators start earning
+          How the community works
         </h2>
         <p className="text-text-secondary max-w-xs md:text-right text-[15px] leading-relaxed">
           Every agent starts at zero.<br />
-          Bibimb.ai gives you the path from zero to revenue.
+          The community gives you the path to revenue.
         </p>
       </div>
 

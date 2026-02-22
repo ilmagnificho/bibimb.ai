@@ -6,75 +6,42 @@ function scrollToWaitlist() {
   document.getElementById("waitlist")?.scrollIntoView({ behavior: "smooth" });
 }
 
-// Creator journey cards — 에이전트 성장 경로를 보여주는 3단계
-const JOURNEY_CARDS = [
+// Real quotes from real forums — actual pain points from agent creators
+const BUILDER_VOICES = [
   {
-    stage: "Just launched",
-    emoji: "\ud83d\udcdd",
-    name: "BlogDraft AI",
-    tagline: "SEO blog posts in 60 seconds",
-    detail: "\ud83e\udd6c 3 free spots left \u00b7 No reviews yet",
-    status: "Gathering first believers",
-    accent: "text-green",
-    bg: "bg-green/8",
+    quote: "I have over 1M users on my GPT and still $0 revenue. I\u2019ve been mass-paying server costs out of pocket for 2 years.",
+    source: "OpenAI Community Forum",
+    emoji: "\ud83d\ude29",
   },
   {
-    stage: "Building trust",
-    emoji: "\ud83d\udd0d",
-    name: "LeadRadar",
-    tagline: "Find & qualify leads automatically",
-    detail: "\u2605 4.8 (5 reviews) \u00b7 $8.70/user",
-    status: "Trust earned, revenue started",
-    accent: "text-secondary",
-    bg: "bg-secondary-light/40",
+    quote: "Built an agent I\u2019m really proud of. No idea how to get my first 5 real users. App stores bury you. Paid ads cost more than I\u2019d ever earn.",
+    source: "r/SideProject",
+    emoji: "\ud83e\udee0",
   },
   {
-    stage: "Scaled",
-    emoji: "\ud83d\udee0\ufe0f",
-    name: "CodeReviewer Pro",
-    tagline: "Catch bugs before your team does",
-    detail: "\u2605 4.6 (48 reviews) \u00b7 $29/user \u00b7 200+ users",
-    status: "Earning steady revenue",
-    accent: "text-primary",
-    bg: "bg-primary-light/60",
+    quote: "GPT Store monetization is US-only and invite-only. I\u2019m in Europe. What are my options? Basically none.",
+    source: "Hacker News",
+    emoji: "\ud83c\udf0d",
   },
 ];
 
-function JourneyCard({ card, delay }: { card: typeof JOURNEY_CARDS[0]; delay: number }) {
+function VoiceCard({ voice, delay }: { voice: typeof BUILDER_VOICES[0]; delay: number }) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay }}
-      className="bg-white rounded-2xl p-4 border border-border/70 shadow-sm hover:shadow-md transition-shadow"
+      className="bg-white rounded-2xl p-5 border border-border/70 shadow-sm"
     >
-      {/* Stage label */}
-      <div className="flex items-center justify-between mb-3">
-        <span className={`text-[10px] font-bold uppercase tracking-widest ${card.accent}`}>
-          {card.stage}
+      <p className="text-[14px] text-text-primary leading-relaxed italic">
+        &ldquo;{voice.quote}&rdquo;
+      </p>
+      <div className="flex items-center gap-2 mt-3 pt-3 border-t border-border/50">
+        <span className="text-lg">{voice.emoji}</span>
+        <span className="text-[11px] text-text-secondary/60">
+          &mdash; {voice.source}
         </span>
       </div>
-
-      <div className="flex items-start gap-3">
-        <div className={`w-10 h-10 rounded-xl ${card.bg} flex items-center justify-center text-xl shrink-0`}>
-          {card.emoji}
-        </div>
-        <div className="flex-1 min-w-0">
-          <p className="font-display font-bold text-[14px] text-text-primary leading-tight truncate">
-            {card.name}
-          </p>
-          <p className="text-[12px] text-text-secondary mt-0.5 leading-snug">
-            {card.tagline}
-          </p>
-        </div>
-      </div>
-
-      <div className="flex items-center justify-between mt-3 pt-3 border-t border-border/50">
-        <span className="text-[11px] text-text-secondary/70">{card.detail}</span>
-      </div>
-      <p className="text-[11px] text-text-secondary/50 mt-1.5 italic">
-        {card.status}
-      </p>
     </motion.div>
   );
 }
@@ -103,16 +70,14 @@ export default function Hero() {
             </div>
 
             <h1 className="font-display font-extrabold text-[2.6rem] md:text-[3.6rem] leading-[1.08] text-text-primary tracking-tight">
-              Where AI agent creators<br />
-              come to <span className="text-primary">earn.</span>
+              Where agent builders<br />
+              earn &mdash; <span className="text-primary">together.</span>
             </h1>
 
             <p className="mt-6 text-[1.05rem] md:text-[1.1rem] leading-[1.75] text-text-secondary">
-              You built something great. But GPT Store pays nothing.<br />
-              Going solo is exhausting.{" "}
+              GPT Store pays nothing. Going solo is exhausting.<br />
               <span className="text-text-primary font-semibold">
-                Bibimb.ai is where agent creators
-                get their first users, first reviews, and first revenue — together.
+                Get your first users, first reviews, and first revenue &mdash; as a community.
               </span>
             </p>
 
@@ -121,17 +86,17 @@ export default function Hero() {
                 onClick={scrollToWaitlist}
                 className="px-7 py-3.5 bg-primary text-white font-semibold rounded-[12px] hover:bg-primary-hover transition-colors text-[15px] cursor-pointer"
               >
-                Deploy my agent \ud83d\ude80
+                Deploy my agent {"\ud83d\ude80"}
               </button>
               <button
                 onClick={scrollToWaitlist}
                 className="px-7 py-3.5 border-2 border-border text-text-primary font-semibold rounded-[12px] hover:border-primary/40 transition-colors text-[15px] cursor-pointer"
               >
-                Try agents for free \ud83e\udd6c
+                Try agents for free {"\ud83e\udd6c"}
               </button>
             </div>
 
-            {/* Stats row */}
+            {/* Stats row — 2 lines per stat */}
             <motion.div
               className="mt-12 flex flex-wrap gap-x-10 gap-y-5 pt-8 border-t border-border/50"
               initial={{ opacity: 0 }}
@@ -139,20 +104,19 @@ export default function Hero() {
               transition={{ delay: 0.35, duration: 0.5 }}
             >
               {[
-                { val: "5\u201350", label: "real users guaranteed", sub: "your first believers" },
-                { val: "0%", label: "platform fees", sub: "for founding creators" },
-                { val: "$0\u2013$99", label: "you set your price", sub: "we handle the tiers" },
+                { val: "5\u201350", label: "real users guaranteed" },
+                { val: "0%", label: "platform fees for founders" },
+                { val: "$0\u2013$99", label: "you set your price" },
               ].map((s) => (
                 <div key={s.label}>
                   <p className="font-display font-bold text-[1.5rem] text-text-primary">{s.val}</p>
                   <p className="text-sm text-text-secondary mt-0.5">{s.label}</p>
-                  <p className="text-[11px] text-text-secondary/50 mt-0.5">{s.sub}</p>
                 </div>
               ))}
             </motion.div>
           </motion.div>
 
-          {/* -- Right: Creator journey cards -- */}
+          {/* -- Right: Real builder voices -- */}
           <div className="flex flex-col gap-3">
             {/* Top label */}
             <motion.div
@@ -162,15 +126,15 @@ export default function Hero() {
               className="flex items-center justify-between mb-1"
             >
               <span className="text-[11px] font-bold uppercase tracking-widest text-text-secondary/40">
-                Your agent&apos;s journey on Bibimb.ai
+                Real builders. Real problems.
               </span>
               <span className="text-[11px] text-text-secondary/40">
-                Preview only
+                This is why we exist.
               </span>
             </motion.div>
 
-            {JOURNEY_CARDS.map((card, i) => (
-              <JourneyCard key={card.name} card={card} delay={0.3 + i * 0.12} />
+            {BUILDER_VOICES.map((voice, i) => (
+              <VoiceCard key={voice.source} voice={voice} delay={0.3 + i * 0.12} />
             ))}
 
             {/* Bottom hint */}
@@ -180,7 +144,7 @@ export default function Hero() {
               transition={{ delay: 0.7, duration: 0.4 }}
               className="text-center text-[12px] text-text-secondary/40 mt-1"
             >
-              Every agent starts at Card 1. Community takes you to Card 3.
+              These are the people Bibimb.ai is built for.
             </motion.p>
           </div>
 

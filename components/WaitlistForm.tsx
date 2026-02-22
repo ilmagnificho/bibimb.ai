@@ -83,12 +83,8 @@ export default function WaitlistForm() {
             >
               <div className="mb-8">
                 <h2 className="font-display font-bold text-[2rem] md:text-[2.4rem] text-text-primary mb-3">
-                  Become a founding creator. {"\ud83e\udd62"}
+                  Join the founding crew. {"\ud83e\udd62"}
                 </h2>
-                <p className="text-text-secondary text-[15px] leading-relaxed">
-                  Join the waitlist and get exclusive founding creator benefits<br />
-                  when we launch.
-                </p>
               </div>
 
               {/* Founding benefits */}
@@ -105,6 +101,10 @@ export default function WaitlistForm() {
                   ))}
                 </ul>
               </div>
+
+              <p className="text-[13px] text-text-secondary/60 text-center mt-4 mb-6 italic">
+                The founding crew is small &mdash; and that&apos;s the point. Early members shape everything.
+              </p>
 
               <form onSubmit={handleSubmit} className="space-y-4">
                 {/* Email */}

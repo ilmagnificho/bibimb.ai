@@ -20,14 +20,14 @@ export default function AboutPage() {
             <span className="text-xs font-bold uppercase tracking-widest text-primary">About</span>
             <h1 className="font-display font-extrabold text-[2.2rem] md:text-[3rem] leading-[1.1] text-text-primary mt-3 mb-5">
               We built Bibimb.ai<br />
-              because agent creators<br />
-              deserve to earn.
+              because no one should<br />
+              build alone.
             </h1>
             <p className="text-[1.05rem] leading-[1.8] text-text-secondary">
-              Bibimb.ai is not just a marketplace &mdash; it&apos;s a monetization-first
-              creator community. We built it because GPT Store and existing platforms
-              fail indie agent creators. The trust-tier pricing system is the mechanism;
-              community is the foundation.
+              Bibimb.ai is a community of agent builders who believe great agents
+              shouldn&apos;t die invisible. We help each other get first users, honest
+              reviews, and real revenue &mdash; through trust-based pricing and zero
+              gatekeeping.
             </p>
           </div>
 

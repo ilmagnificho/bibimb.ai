@@ -1,21 +1,20 @@
 import Nav from "@/components/Nav";
 import Hero from "@/components/Hero";
 import TrustProblem from "@/components/TrustProblem";
+import CommunityJoin from "@/components/CommunityJoin";
 import HowItWorks from "@/components/HowItWorks";
 import CreatorDemo from "@/components/CreatorDemo";
-import CommunityJoin from "@/components/CommunityJoin";
 import WaitlistForm from "@/components/WaitlistForm";
 import Footer from "@/components/Footer";
 import StickySignup from "@/components/StickySignup";
 
 // Section order:
-// Hero (2-col with creator journey cards)
-// TrustProblem (GPT Store failure + builder pain points)
-// HowItWorks (4-step flow)
+// Hero (builder voices + earn together)
+// TrustProblem (why the current system fails)
+// CommunityJoin (the people — immediately after the problem)
+// HowItWorks (how the community helps — mechanism)
 // CreatorDemo (interactive pricing tool)
-// CommunityJoin (founding creators pitch)
-// WaitlistForm (creator-first signup)
-// + StickySignup (fixed bottom, appears on scroll)
+// WaitlistForm (join the founding crew)
 
 export default function Home() {
   return (
@@ -24,9 +23,9 @@ export default function Home() {
       <main>
         <Hero />
         <TrustProblem />
+        <CommunityJoin />
         <HowItWorks />
         <CreatorDemo />
-        <CommunityJoin />
         <WaitlistForm />
       </main>
       <Footer />

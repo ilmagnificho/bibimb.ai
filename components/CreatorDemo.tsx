@@ -45,7 +45,7 @@ export default function CreatorDemo() {
             Design your agent&apos;s pricing in 30 seconds
           </h2>
           <p className="text-text-secondary text-[15px]">
-            Set your free tier and target price. We handle the rest.
+            Two inputs. Auto-generated trust tiers.
           </p>
         </motion.div>
       </div>
@@ -213,10 +213,10 @@ export default function CreatorDemo() {
             onClick={scrollToWaitlist}
             className="px-8 py-3.5 bg-primary text-white font-semibold rounded-[12px] hover:bg-primary-hover transition-colors text-[15px] cursor-pointer"
           >
-            Like what you see? Deploy my agent {"\u2192"}
+            Like what you see? Join as founding creator {"\u2192"}
           </button>
           <p className="text-center text-xs text-text-secondary/50 mt-4">
-            Demo simulation only &mdash; pricing is auto-calculated based on your inputs.
+            Simulation only &mdash; real pricing launches with the community.
           </p>
         </motion.div>
       </div>

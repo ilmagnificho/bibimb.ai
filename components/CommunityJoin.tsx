@@ -7,24 +7,24 @@ function scrollToWaitlist() {
   document.getElementById("waitlist")?.scrollIntoView({ behavior: "smooth" });
 }
 
-const VALUE_PROPS = [
+const COMMUNITY_VALUES = [
   {
     emoji: "\ud83e\udd1d",
-    title: "Peer reviews before you launch",
+    title: "Builders test each other\u2019s agents",
     description:
-      "Your agent gets tested by fellow creators before it goes live. Real feedback, not fake ratings.",
+      "Your agent gets real feedback from people who build agents themselves \u2014 not random clicks.",
   },
   {
     emoji: "\ud83d\udcca",
-    title: "Shared revenue playbooks",
+    title: "Revenue numbers are shared openly",
     description:
-      "What pricing works? What doesn\u2019t? Learn from creators who are actually earning \u2014 not from Twitter threads.",
+      "What pricing works? What doesn\u2019t? No secrets. The community learns and earns together.",
   },
   {
     emoji: "\ud83d\ude80",
-    title: "First believers for every launch",
+    title: "Every launch gets community support",
     description:
-      "When you deploy, the community shows up. Your first 5-50 users aren\u2019t strangers \u2014 they\u2019re fellow builders who understand agents.",
+      "When you deploy, fellow builders show up as your first users. You do the same for them.",
   },
 ];
 
@@ -43,19 +43,19 @@ export default function CommunityJoin() {
             Better together
           </span>
           <h2 className="font-display font-bold text-[2rem] md:text-[2.4rem] text-text-primary mb-4 leading-tight">
-            Join creators who refuse<br />
-            to let great agents die.
+            Built by builders.<br />
+            For builders. No gatekeepers.
           </h2>
           <p className="text-text-secondary max-w-lg mx-auto text-[15px] leading-relaxed">
-            Bibimb.ai isn&apos;t just a platform. It&apos;s a community of agent builders
-            united around one thing: earning from what they create.
+            We believe great agents shouldn&apos;t die invisible. So we test each
+            other&apos;s work, share what we learn, and help each other earn.
           </p>
         </motion.div>
       </div>
 
-      {/* 3 value prop cards */}
+      {/* 3 behavior-based value prop cards */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10">
-        {VALUE_PROPS.map((prop, idx) => (
+        {COMMUNITY_VALUES.map((prop, idx) => (
           <motion.div
             key={prop.title}
             initial={{ opacity: 0, y: 20 }}
@@ -74,20 +74,6 @@ export default function CommunityJoin() {
           </motion.div>
         ))}
       </div>
-
-      {/* Honest social proof */}
-      <motion.div
-        initial={{ opacity: 0, y: 12 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.45, delay: 0.2 }}
-        className="text-center mb-8"
-      >
-        <p className="text-text-secondary text-[15px] leading-relaxed max-w-md mx-auto italic">
-          &ldquo;We&apos;re just getting started. The founding crew is small &mdash; and that&apos;s the point.
-          Early members shape everything: the platform, the culture, the rules.&rdquo;
-        </p>
-      </motion.div>
 
       {/* CTA */}
       <div className="text-center">

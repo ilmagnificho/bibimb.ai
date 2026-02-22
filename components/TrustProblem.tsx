@@ -33,21 +33,21 @@ export default function TrustProblem() {
             stat: "90%",
             title: "of indie agents die in 90 days",
             description:
-              "Not because they\u2019re bad. Because they never got 5 real users. No users \u2192 no reviews \u2192 no trust \u2192 no growth.",
+              "No users \u2192 no reviews \u2192 no trust \u2192 no growth.",
           },
           {
             icon: "\ud83c\udfea",
             stat: "$0",
             title: "is what GPT Store pays most creators",
             description:
-              "US-only monetization. Invite-only program. One builder with 1M users earns nothing. Smart creators already gave up on it.",
+              "US-only. Invite-only. One builder has 1M users and $0 revenue.",
           },
           {
             icon: "\ud83d\ude29",
             stat: "Solo",
             title: "is how most creators try to sell",
             description:
-              "Gumroad + Stripe + marketing + support + reviews. All alone. No community. No shared infrastructure. No leverage.",
+              "Gumroad + Stripe + marketing + support + reviews. All alone. No leverage.",
           },
         ].map((item, idx) => (
           <motion.div
@@ -82,12 +82,10 @@ export default function TrustProblem() {
       >
         <span className="text-3xl shrink-0">{"\ud83c\udf5a"}</span>
         <p className="text-[15px] text-text-primary font-medium text-center sm:text-left leading-relaxed">
-          Bibimb.ai is different. Deploy your agent. Get{" "}
-          <span className="font-bold text-primary">5-50 real users free</span>.
-          Earn{" "}
-          <span className="font-bold text-primary">honest reviews</span>.
-          Start charging &mdash; with{" "}
-          <span className="font-bold text-primary">zero platform fees</span>. Together.
+          That&apos;s why we&apos;re building Bibimb.ai. A community where builders give each other{" "}
+          <span className="font-bold text-primary">first users</span>,{" "}
+          <span className="font-bold text-primary">honest reviews</span>, and a{" "}
+          <span className="font-bold text-primary">real path to revenue</span>.
         </p>
       </motion.div>
 
