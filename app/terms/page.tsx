@@ -3,8 +3,9 @@ import Footer from "@/components/Footer";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Terms of Service — Bibimb.ai",
-  description: "Terms of Service for Bibimb.ai",
+  title: "Terms of Service",
+  description: "Terms of Service for Bibimb.ai — pre-launch placeholder.",
+  robots: { index: false, follow: false },
 };
 
 export default function TermsPage() {

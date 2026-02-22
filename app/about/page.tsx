@@ -4,8 +4,28 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "About — Bibimb.ai",
-  description: "Why I built Bibimb.ai — a community where AI agent builders help each other get first users, honest reviews, and real revenue. Founded by Yoongjae Cho.",
+  title: "Why I Built Bibimb.ai",
+  description:
+    "Yoongjae Cho \u2014 investor and builder from Seoul \u2014 on why he built Bibimb.ai: a community where AI agent builders help each other get first users, honest reviews, and real revenue.",
+  alternates: {
+    canonical: "https://bibimb.ai/about",
+  },
+  openGraph: {
+    title: "Why I Built Bibimb.ai \u2014 Yoongjae Cho",
+    description:
+      "I kept watching talented builders create genuinely useful AI agents \u2014 and then nothing happened. No users. No revenue. That\u2019s why I built Bibimb.ai.",
+    url: "https://bibimb.ai/about",
+    siteName: "Bibimb.ai",
+    type: "article",
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Why I Built Bibimb.ai \u2014 Yoongjae Cho",
+    description:
+      "I kept watching talented builders create genuinely useful AI agents \u2014 and then nothing happened. No users. No revenue. That\u2019s why I built Bibimb.ai.",
+    creator: "@ilmagnificho",
+  },
 };
 
 export default function AboutPage() {

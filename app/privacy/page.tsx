@@ -3,8 +3,9 @@ import Footer from "@/components/Footer";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy — Bibimb.ai",
-  description: "Privacy Policy for Bibimb.ai",
+  title: "Privacy Policy",
+  description: "Privacy Policy for Bibimb.ai \u2014 pre-launch placeholder.",
+  robots: { index: false, follow: false },
 };
 
 export default function PrivacyPage() {
